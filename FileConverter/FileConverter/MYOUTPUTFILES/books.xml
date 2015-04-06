@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<books>
+<element>
+<Author>Gambardella, Matthew</Author>
+</element>
+<element>
+<Title>XML Developer's Guide</Title>
+</element>
+<element>
+<Genre>Computer</Genre>
+</element>
+<element>
+<Price>44.95</Price>
+</element>
+<element>
+<Publish_date>2000-10-01</Publish_date>
+</element>
+<element>
+<Description>An in-depth look at creating applications </Description>
+</element>
+<element>
+<>     with XML.</>
+</element>
+<element>
+<Author>Ralls, Kim</Author>
+</element>
+<element>
+<Title>Midnight Rain</Title>
+</element>
+<element>
+<Genre>Fantasy</Genre>
+</element>
+<element>
+<Price>5.95</Price>
+</element>
+<element>
+<Publish_date>2000-12-16</Publish_date>
+</element>
+<element>
+<Description>A former architect battles corporate zombies, </Description>
+</element>
+<element>
+<>     an evil sorceress, and her own childhood to become queen </>
+</element>
+<element>
+<>     of the world.</>
+</element>
+<element>
+<Author>Corets, Eva</Author>
+</element>
+<element>
+<Title>Maeve Ascendant</Title>
+</element>
+<element>
+<Genre>Fantasy</Genre>
+</element>
+<element>
+<Price>5.95</Price>
+</element>
+<element>
+<Publish_date>2000-11-17</Publish_date>
+</element>
+<element>
+<Description>After the collapse of a nanotechnology </Description>
+</element>
+<element>
+<>     society in England, the young survivors lay the </>
+</element>
+<element>
+<>     foundation for a new society.</>
+</element>
+<element>
+<Author>Corets, Eva</Author>
+</element>
+<element>
+<Title>Oberon's Legacy</Title>
+</element>
+<element>
+<Genre>Fantasy</Genre>
+</element>
+<element>
+<Price>5.95</Price>
+</element>
+<element>
+<Publish_date>2001-03-10</Publish_date>
+</element>
+<element>
+<Description>In post-apocalypse England, the mysterious </Description>
+</element>
+<element>
+<>     agent known only as Oberon helps to create a new life </>
+</element>
+<element>
+<>     for the inhabitants of London. Sequel to Maeve </>
+</element>
+<element>
+<>     Ascendant.</>
+</element>
+<element>
+<Author>Corets, Eva</Author>
+</element>
+<element>
+<Title>The Sundered Grail</Title>
+</element>
+<element>
+<Genre>Fantasy</Genre>
+</element>
+<element>
+<Price>5.95</Price>
+</element>
+<element>
+<Publish_date>2001-09-10</Publish_date>
+</element>
+<element>
+<Description>The two daughters of Maeve, half-sisters, </Description>
+</element>
+<element>
+<>     battle one another for control of England. Sequel to </>
+</element>
+<element>
+<>     Oberon's Legacy.</>
+</element>
+<element>
+<Author>Randall, Cynthia</Author>
+</element>
+<element>
+<Title>Lover Birds</Title>
+</element>
+<element>
+<Genre>Romance</Genre>
+</element>
+<element>
+<Price>4.95</Price>
+</element>
+<element>
+<Publish_date>2000-09-02</Publish_date>
+</element>
+<element>
+<Description>When Carla meets Paul at an ornithology </Description>
+</element>
+<element>
+<>     conference, tempers fly as feathers get ruffled.</>
+</element>
+<element>
+<Author>Thurman, Paula</Author>
+</element>
+<element>
+<Title>Splish Splash</Title>
+</element>
+<element>
+<Genre>Romance</Genre>
+</element>
+<element>
+<Price>4.95</Price>
+</element>
+<element>
+<Publish_date>2000-11-02</Publish_date>
+</element>
+<element>
+<Description>A deep sea diver finds true love twenty </Description>
+</element>
+<element>
+<>     thousand leagues beneath the sea.</>
+</element>
+<element>
+<Author>Knorr, Stefan</Author>
+</element>
+<element>
+<Title>Creepy Crawlies</Title>
+</element>
+<element>
+<Genre>Horror</Genre>
+</element>
+<element>
+<Price>4.95</Price>
+</element>
+<element>
+<Publish_date>2000-12-06</Publish_date>
+</element>
+<element>
+<Description>An anthology of horror stories about roaches,</Description>
+</element>
+<element>
+<>     centipedes, scorpions  and other insects.</>
+</element>
+<element>
+<Author>Kress, Peter</Author>
+</element>
+<element>
+<Title>Paradox Lost</Title>
+</element>
+<element>
+<Genre>Science Fiction</Genre>
+</element>
+<element>
+<Price>6.95</Price>
+</element>
+<element>
+<Publish_date>2000-11-02</Publish_date>
+</element>
+<element>
+<Description>After an inadvertant trip through a Heisenberg</Description>
+</element>
+<element>
+<>     Uncertainty Device, James Salway discovers the problems </>
+</element>
+<element>
+<>     of being quantum.</>
+</element>
+<element>
+<Author>O'Brien, Tim</Author>
+</element>
+<element>
+<Title>Microsoft .NET: The Programming Bible</Title>
+</element>
+<element>
+<Genre>Computer</Genre>
+</element>
+<element>
+<Price>36.95</Price>
+</element>
+<element>
+<Publish_date>2000-12-09</Publish_date>
+</element>
+<element>
+<Description>Microsoft's .NET initiative is explored in </Description>
+</element>
+<element>
+<>     detail in this deep programmer's reference.</>
+</element>
+<element>
+<Author>O'Brien, Tim</Author>
+</element>
+<element>
+<Title>MSXML3: A Comprehensive Guide</Title>
+</element>
+<element>
+<Genre>Computer</Genre>
+</element>
+<element>
+<Price>36.95</Price>
+</element>
+<element>
+<Publish_date>2000-12-01</Publish_date>
+</element>
+<element>
+<Description>The Microsoft MSXML3 parser is covered in </Description>
+</element>
+<element>
+<>     detail, with attention to XML DOM interfaces, XSLT processing, </>
+</element>
+<element>
+<>     SAX and more.</>
+</element>
+<element>
+<Author>Galos, Mike</Author>
+</element>
+<element>
+<Title>Visual Studio 7: A Comprehensive Guide</Title>
+</element>
+<element>
+<Genre>Computer</Genre>
+</element>
+<element>
+<Price>49.95</Price>
+</element>
+<element>
+<Publish_date>2001-04-16</Publish_date>
+</element>
+<element>
+<Description>Microsoft Visual Studio 7 is explored in depth,</Description>
+</element>
+<element>
+<>     looking at how Visual Basic, Visual C++, C#, and ASP+ are </>
+</element>
+<element>
+<>     integrated into a comprehensive development </>
+</element>
+<element>
+<>     environment.</>
+</element>
+</books>

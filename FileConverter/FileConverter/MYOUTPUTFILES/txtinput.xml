@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<txtinput>
+<element>
+<To>Tove</To>
+</element>
+<element>
+<From>Jani</From>
+</element>
+<element>
+<Heading>Reminder</Heading>
+</element>
+<element>
+<Body>Don't forget me this weekend!</Body>
+</element>
+</txtinput>

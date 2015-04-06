@@ -1,0 +1,471 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<cd_catalog>
+<element>
+<TITLE>Empire Burlesque</TITLE>
+</element>
+<element>
+<ARTIST>Bob Dylan</ARTIST>
+</element>
+<element>
+<COUNTRY>USA</COUNTRY>
+</element>
+<element>
+<COMPANY>Columbia</COMPANY>
+</element>
+<element>
+<PRICE>10.90</PRICE>
+</element>
+<element>
+<YEAR>1985</YEAR>
+</element>
+<element>
+<TITLE>Hide your heart</TITLE>
+</element>
+<element>
+<ARTIST>Bonnie Tyler</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>CBS Records</COMPANY>
+</element>
+<element>
+<PRICE>9.90</PRICE>
+</element>
+<element>
+<YEAR>1988</YEAR>
+</element>
+<element>
+<TITLE>Greatest Hits</TITLE>
+</element>
+<element>
+<ARTIST>Dolly Parton</ARTIST>
+</element>
+<element>
+<COUNTRY>USA</COUNTRY>
+</element>
+<element>
+<COMPANY>RCA</COMPANY>
+</element>
+<element>
+<PRICE>9.90</PRICE>
+</element>
+<element>
+<YEAR>1982</YEAR>
+</element>
+<element>
+<TITLE>Still got the blues</TITLE>
+</element>
+<element>
+<ARTIST>Gary Moore</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>Virgin records</COMPANY>
+</element>
+<element>
+<PRICE>10.20</PRICE>
+</element>
+<element>
+<YEAR>1990</YEAR>
+</element>
+<element>
+<TITLE>Eros</TITLE>
+</element>
+<element>
+<ARTIST>Eros Ramazzotti</ARTIST>
+</element>
+<element>
+<COUNTRY>EU</COUNTRY>
+</element>
+<element>
+<COMPANY>BMG</COMPANY>
+</element>
+<element>
+<PRICE>9.90</PRICE>
+</element>
+<element>
+<YEAR>1997</YEAR>
+</element>
+<element>
+<TITLE>One night only</TITLE>
+</element>
+<element>
+<ARTIST>Bee Gees</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>Polydor</COMPANY>
+</element>
+<element>
+<PRICE>10.90</PRICE>
+</element>
+<element>
+<YEAR>1998</YEAR>
+</element>
+<element>
+<TITLE>Sylvias Mother</TITLE>
+</element>
+<element>
+<ARTIST>Dr.Hook</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>CBS</COMPANY>
+</element>
+<element>
+<PRICE>8.10</PRICE>
+</element>
+<element>
+<YEAR>1973</YEAR>
+</element>
+<element>
+<TITLE>Maggie May</TITLE>
+</element>
+<element>
+<ARTIST>Rod Stewart</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>Pickwick</COMPANY>
+</element>
+<element>
+<PRICE>8.50</PRICE>
+</element>
+<element>
+<YEAR>1990</YEAR>
+</element>
+<element>
+<TITLE>Romanza</TITLE>
+</element>
+<element>
+<ARTIST>Andrea Bocelli</ARTIST>
+</element>
+<element>
+<COUNTRY>EU</COUNTRY>
+</element>
+<element>
+<COMPANY>Polydor</COMPANY>
+</element>
+<element>
+<PRICE>10.80</PRICE>
+</element>
+<element>
+<YEAR>1996</YEAR>
+</element>
+<element>
+<TITLE>When a man loves a woman</TITLE>
+</element>
+<element>
+<ARTIST>Percy Sledge</ARTIST>
+</element>
+<element>
+<COUNTRY>USA</COUNTRY>
+</element>
+<element>
+<COMPANY>Atlantic</COMPANY>
+</element>
+<element>
+<PRICE>8.70</PRICE>
+</element>
+<element>
+<YEAR>1987</YEAR>
+</element>
+<element>
+<TITLE>Black angel</TITLE>
+</element>
+<element>
+<ARTIST>Savage Rose</ARTIST>
+</element>
+<element>
+<COUNTRY>EU</COUNTRY>
+</element>
+<element>
+<COMPANY>Mega</COMPANY>
+</element>
+<element>
+<PRICE>10.90</PRICE>
+</element>
+<element>
+<YEAR>1995</YEAR>
+</element>
+<element>
+<TITLE>1999 Grammy Nominees</TITLE>
+</element>
+<element>
+<ARTIST>Many</ARTIST>
+</element>
+<element>
+<COUNTRY>USA</COUNTRY>
+</element>
+<element>
+<COMPANY>Grammy</COMPANY>
+</element>
+<element>
+<PRICE>10.20</PRICE>
+</element>
+<element>
+<YEAR>1999</YEAR>
+</element>
+<element>
+<TITLE>For the good times</TITLE>
+</element>
+<element>
+<ARTIST>Kenny Rogers</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>Mucik Master</COMPANY>
+</element>
+<element>
+<PRICE>8.70</PRICE>
+</element>
+<element>
+<YEAR>1995</YEAR>
+</element>
+<element>
+<TITLE>Big Willie style</TITLE>
+</element>
+<element>
+<ARTIST>Will Smith</ARTIST>
+</element>
+<element>
+<COUNTRY>USA</COUNTRY>
+</element>
+<element>
+<COMPANY>Columbia</COMPANY>
+</element>
+<element>
+<PRICE>9.90</PRICE>
+</element>
+<element>
+<YEAR>1997</YEAR>
+</element>
+<element>
+<TITLE>Tupelo Honey</TITLE>
+</element>
+<element>
+<ARTIST>Van Morrison</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>Polydor</COMPANY>
+</element>
+<element>
+<PRICE>8.20</PRICE>
+</element>
+<element>
+<YEAR>1971</YEAR>
+</element>
+<element>
+<TITLE>Soulsville</TITLE>
+</element>
+<element>
+<ARTIST>Jorn Hoel</ARTIST>
+</element>
+<element>
+<COUNTRY>Norway</COUNTRY>
+</element>
+<element>
+<COMPANY>WEA</COMPANY>
+</element>
+<element>
+<PRICE>7.90</PRICE>
+</element>
+<element>
+<YEAR>1996</YEAR>
+</element>
+<element>
+<TITLE>The very best of</TITLE>
+</element>
+<element>
+<ARTIST>Cat Stevens</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>Island</COMPANY>
+</element>
+<element>
+<PRICE>8.90</PRICE>
+</element>
+<element>
+<YEAR>1990</YEAR>
+</element>
+<element>
+<TITLE>Stop</TITLE>
+</element>
+<element>
+<ARTIST>Sam Brown</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>A and M</COMPANY>
+</element>
+<element>
+<PRICE>8.90</PRICE>
+</element>
+<element>
+<YEAR>1988</YEAR>
+</element>
+<element>
+<TITLE>Bridge of Spies</TITLE>
+</element>
+<element>
+<ARTIST>T'Pau</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>Siren</COMPANY>
+</element>
+<element>
+<PRICE>7.90</PRICE>
+</element>
+<element>
+<YEAR>1987</YEAR>
+</element>
+<element>
+<TITLE>Private Dancer</TITLE>
+</element>
+<element>
+<ARTIST>Tina Turner</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>Capitol</COMPANY>
+</element>
+<element>
+<PRICE>8.90</PRICE>
+</element>
+<element>
+<YEAR>1983</YEAR>
+</element>
+<element>
+<TITLE>Midt om natten</TITLE>
+</element>
+<element>
+<ARTIST>Kim Larsen</ARTIST>
+</element>
+<element>
+<COUNTRY>EU</COUNTRY>
+</element>
+<element>
+<COMPANY>Medley</COMPANY>
+</element>
+<element>
+<PRICE>7.80</PRICE>
+</element>
+<element>
+<YEAR>1983</YEAR>
+</element>
+<element>
+<TITLE>Pavarotti Gala Concert</TITLE>
+</element>
+<element>
+<ARTIST>Luciano Pavarotti</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>DECCA</COMPANY>
+</element>
+<element>
+<PRICE>9.90</PRICE>
+</element>
+<element>
+<YEAR>1991</YEAR>
+</element>
+<element>
+<TITLE>The dock of the bay</TITLE>
+</element>
+<element>
+<ARTIST>Otis Redding</ARTIST>
+</element>
+<element>
+<COUNTRY>USA</COUNTRY>
+</element>
+<element>
+<COMPANY>Atlantic</COMPANY>
+</element>
+<element>
+<PRICE>7.90</PRICE>
+</element>
+<element>
+<YEAR>1987</YEAR>
+</element>
+<element>
+<TITLE>Picture book</TITLE>
+</element>
+<element>
+<ARTIST>Simply Red</ARTIST>
+</element>
+<element>
+<COUNTRY>EU</COUNTRY>
+</element>
+<element>
+<COMPANY>Elektra</COMPANY>
+</element>
+<element>
+<PRICE>7.20</PRICE>
+</element>
+<element>
+<YEAR>1985</YEAR>
+</element>
+<element>
+<TITLE>Red</TITLE>
+</element>
+<element>
+<ARTIST>The Communards</ARTIST>
+</element>
+<element>
+<COUNTRY>UK</COUNTRY>
+</element>
+<element>
+<COMPANY>London</COMPANY>
+</element>
+<element>
+<PRICE>7.80</PRICE>
+</element>
+<element>
+<YEAR>1987</YEAR>
+</element>
+<element>
+<TITLE>Unchain my heart</TITLE>
+</element>
+<element>
+<ARTIST>Joe Cocker</ARTIST>
+</element>
+<element>
+<COUNTRY>USA</COUNTRY>
+</element>
+<element>
+<COMPANY>EMI</COMPANY>
+</element>
+<element>
+<PRICE>8.20</PRICE>
+</element>
+<element>
+<YEAR>1987</YEAR>
+</element>
+</cd_catalog>
