@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="WebContentRepo.MasterPages.Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Web Content Repository</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/jquery.scrollzer.min.js"></script>
+    <script src="Scripts/jquery.scrolly.min.js"></script>
+    <script src="Scripts/skel.min.js"></script>
+    <script src="Scripts/skel-layers.min.js"></script>
+    <script src="Scripts/init.js"></script>
+    <noscript>
+    <link rel="stylesheet" href="css/skel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-xlarge.css" />
+    </noscript>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <span class="image fit"><img src="images/banner.jpg" alt="" /></span>
+        		<div id="wrapper">
+                    <section id="header" class="skel-layers-fixed">                        
+					<header>                        
+						<span class="image avatar"><img src="../images/avatar.jpg" alt="" /></span>
+						<h1 id="logo"><a href="#">Web Content Repository</a></h1>
+						<p>BITS Pilani Dubai Campus</p>
+					</header>
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                     <footer>
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</footer>
+				</section>
+                    </div>
+        <asp:ContentPlaceHolder ID="cpBody" runat="server">
+
+
+        </asp:ContentPlaceHolder>
+
+        		<section id="footer">
+					<div class="container">
+						<ul class="copyright">
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+    </form>
+</body>
+</html>

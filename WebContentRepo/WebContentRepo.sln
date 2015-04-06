@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebContentRepo", "WebContentRepo\WebContentRepo.csproj", "{B81C9062-E7F9-4B30-BA35-25F6AE382D66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoDAL", "RepoDAL\RepoDAL.csproj", "{43084021-CCFE-44BB-A2D3-83AD5AE159E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoBLL", "RepoBLL\RepoBLL.csproj", "{01EDB102-7CE5-4AF8-8654-4558B12D1EDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B81C9062-E7F9-4B30-BA35-25F6AE382D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81C9062-E7F9-4B30-BA35-25F6AE382D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81C9062-E7F9-4B30-BA35-25F6AE382D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81C9062-E7F9-4B30-BA35-25F6AE382D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43084021-CCFE-44BB-A2D3-83AD5AE159E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43084021-CCFE-44BB-A2D3-83AD5AE159E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43084021-CCFE-44BB-A2D3-83AD5AE159E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43084021-CCFE-44BB-A2D3-83AD5AE159E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01EDB102-7CE5-4AF8-8654-4558B12D1EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01EDB102-7CE5-4AF8-8654-4558B12D1EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01EDB102-7CE5-4AF8-8654-4558B12D1EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01EDB102-7CE5-4AF8-8654-4558B12D1EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

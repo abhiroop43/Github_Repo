@@ -1,0 +1,10 @@
+F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\bin\WebContentRepo.dll.config
+F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\bin\WebContentRepo.dll
+F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\bin\WebContentRepo.pdb
+F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\obj\Debug\WebContentRepo.csprojResolveAssemblyReference.cache
+F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\obj\Debug\WebContentRepo.dll
+F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\obj\Debug\WebContentRepo.pdb
+F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\bin\RepoBLL.dll
+F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\bin\RepoBLL.pdb
+F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\bin\RepoDAL.dll
+F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\bin\RepoDAL.pdb

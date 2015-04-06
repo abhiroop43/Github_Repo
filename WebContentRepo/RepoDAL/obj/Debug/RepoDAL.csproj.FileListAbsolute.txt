@@ -1,0 +1,5 @@
+F:\visual_studio\Assignment\Sem2\WebContentRepo\RepoDAL\bin\Debug\RepoDAL.dll
+F:\visual_studio\Assignment\Sem2\WebContentRepo\RepoDAL\bin\Debug\RepoDAL.pdb
+F:\visual_studio\Assignment\Sem2\WebContentRepo\RepoDAL\obj\Debug\RepoDAL.csprojResolveAssemblyReference.cache
+F:\visual_studio\Assignment\Sem2\WebContentRepo\RepoDAL\obj\Debug\RepoDAL.dll
+F:\visual_studio\Assignment\Sem2\WebContentRepo\RepoDAL\obj\Debug\RepoDAL.pdb
