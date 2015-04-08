@@ -8,3 +8,13 @@ F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\bin\RepoBLL.dll
 F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\bin\RepoBLL.pdb
 F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\bin\RepoDAL.dll
 F:\visual_studio\Assignment\Sem2\WebContentRepo\WebContentRepo\bin\RepoDAL.pdb
+F:\Source_control\Github\Github_Repo\WebContentRepo\WebContentRepo\bin\WebContentRepo.dll.config
+F:\Source_control\Github\Github_Repo\WebContentRepo\WebContentRepo\bin\WebContentRepo.dll
+F:\Source_control\Github\Github_Repo\WebContentRepo\WebContentRepo\bin\WebContentRepo.pdb
+F:\Source_control\Github\Github_Repo\WebContentRepo\WebContentRepo\bin\RepoBLL.dll
+F:\Source_control\Github\Github_Repo\WebContentRepo\WebContentRepo\bin\RepoDAL.dll
+F:\Source_control\Github\Github_Repo\WebContentRepo\WebContentRepo\bin\RepoBLL.pdb
+F:\Source_control\Github\Github_Repo\WebContentRepo\WebContentRepo\bin\RepoDAL.pdb
+F:\Source_control\Github\Github_Repo\WebContentRepo\WebContentRepo\obj\Debug\WebContentRepo.csprojResolveAssemblyReference.cache
+F:\Source_control\Github\Github_Repo\WebContentRepo\WebContentRepo\obj\Debug\WebContentRepo.dll
+F:\Source_control\Github\Github_Repo\WebContentRepo\WebContentRepo\obj\Debug\WebContentRepo.pdb

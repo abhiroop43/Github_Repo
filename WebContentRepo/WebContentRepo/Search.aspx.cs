@@ -26,10 +26,14 @@ namespace WebContentRepo
         {
             try
             {
+                //download file to a selected path//
+                //WebClient wc = new WebClient();
+                //wc.DownloadFile(@"F:\visual_studio\Assignment\Lab3\Repo\CC\02_05_d_51_cc_e.pdf", @"F:\visual_studio\test.pdf");
+
                 if(ValidateInputs())
                 {
                     DataTable dtSearchResults = objBLL.GetSearchResults(txtSearch.Value.Trim(), Convert.ToInt32(txtNoOfLinks.Value.Trim()), WindowsIdentity.GetCurrent().Name);
-
+                    
                     //load in session and send to search results page//
                     Session["SearchResults"] = dtSearchResults;
                     Response.Redirect("~/SearchResults.aspx");
