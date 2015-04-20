@@ -150,6 +150,7 @@
     <Content Include="sass\_mixins.scss" />
     <Content Include="sass\_vars.scss" />
     <Content Include="sass\ie\v8.scss" />
+    <None Include="Properties\PublishProfiles\LocalPC.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
