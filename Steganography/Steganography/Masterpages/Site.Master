@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DDSInvertedIndex.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Steganography Demo</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/jquery.scrollzer.min.js"></script>
+    <script src="Scripts/jquery.scrolly.min.js"></script>
+    <script src="Scripts/skel.min.js"></script>
+    <script src="Scripts/skel-layers.min.js"></script>
+    <script src="Scripts/init.js"></script>
+    <noscript>
+    <link rel="stylesheet" href="css/skel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-xlarge.css" />
+    </noscript>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <span class="image fit"><img src="images/banner.jpg" alt="" /></span>
+        		<div id="wrapper">
+                    <section id="header" class="skel-layers-fixed">                        
+					<header>                        
+						<span class="image avatar"><img src="../images/avatar.jpg" alt="" /></span>
+						<h1 id="logo"><a href="#">Steganography Demo</a></h1>
+						<p>Network Security Lab Assignment</p>
+					</header>
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                     <footer>
+						
+					</footer>
+				</section>
+                    </div>
+        <asp:ContentPlaceHolder ID="cpBody" runat="server">
+
+
+        </asp:ContentPlaceHolder>
+
+        		<section id="footer">
+					<div class="container">
+						<ul class="copyright">
+							<li>&copy; Abhiroop Santra. All rights reserved.</li><li>ID: 2014H112006U Dept: M.E. (S.S.)</li>
+						</ul>
+					</div>
+				</section>
+    </form>
+</body>
+</html>

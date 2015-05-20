@@ -5,3 +5,10 @@ F:\visual_studio\Assignment\Sem2\WebContentRepo\RepoBLL\bin\Debug\RepoDAL.pdb
 F:\visual_studio\Assignment\Sem2\WebContentRepo\RepoBLL\obj\Debug\RepoBLL.csprojResolveAssemblyReference.cache
 F:\visual_studio\Assignment\Sem2\WebContentRepo\RepoBLL\obj\Debug\RepoBLL.dll
 F:\visual_studio\Assignment\Sem2\WebContentRepo\RepoBLL\obj\Debug\RepoBLL.pdb
+F:\Source_control\Github\Github_Repo\WebContentRepo\RepoBLL\bin\Debug\RepoBLL.dll
+F:\Source_control\Github\Github_Repo\WebContentRepo\RepoBLL\bin\Debug\RepoBLL.pdb
+F:\Source_control\Github\Github_Repo\WebContentRepo\RepoBLL\bin\Debug\RepoDAL.dll
+F:\Source_control\Github\Github_Repo\WebContentRepo\RepoBLL\bin\Debug\RepoDAL.pdb
+F:\Source_control\Github\Github_Repo\WebContentRepo\RepoBLL\obj\Debug\RepoBLL.csprojResolveAssemblyReference.cache
+F:\Source_control\Github\Github_Repo\WebContentRepo\RepoBLL\obj\Debug\RepoBLL.dll
+F:\Source_control\Github\Github_Repo\WebContentRepo\RepoBLL\obj\Debug\RepoBLL.pdb
