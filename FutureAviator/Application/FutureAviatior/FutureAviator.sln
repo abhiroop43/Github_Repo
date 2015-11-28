@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutureAviator", "FutureAviatior\FutureAviator.csproj", "{6893AD29-0E4D-4850-A01E-B9C1B8F11765}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{651C15A9-652D-4B48-89EC-A77EF7D12472}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessDTO", "BusinessDTO\BusinessDTO.csproj", "{7E2027D9-7DD3-4BE9-96A0-92DF253B3564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionLogger", "ExceptionLogger\ExceptionLogger.csproj", "{1421F0E6-7AC3-4500-A671-A4BB43D13CF8}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://auhtfsapp01:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = BusinessDTO\\BusinessDTO.csproj
+		SccProjectName0 = BusinessDTO
+		SccLocalPath0 = BusinessDTO
+		SccProjectUniqueName1 = DataAccess\\DataAccess.csproj
+		SccProjectName1 = DataAccess
+		SccLocalPath1 = DataAccess
+		SccProjectUniqueName2 = ExceptionLogger\\ExceptionLogger.csproj
+		SccProjectName2 = ExceptionLogger
+		SccLocalPath2 = ExceptionLogger
+		SccProjectUniqueName3 = FutureAviatior\\FutureAviator.csproj
+		SccProjectName3 = FutureAviatior
+		SccLocalPath3 = FutureAviatior
+		SccLocalPath4 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6893AD29-0E4D-4850-A01E-B9C1B8F11765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6893AD29-0E4D-4850-A01E-B9C1B8F11765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6893AD29-0E4D-4850-A01E-B9C1B8F11765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6893AD29-0E4D-4850-A01E-B9C1B8F11765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{651C15A9-652D-4B48-89EC-A77EF7D12472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{651C15A9-652D-4B48-89EC-A77EF7D12472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{651C15A9-652D-4B48-89EC-A77EF7D12472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{651C15A9-652D-4B48-89EC-A77EF7D12472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E2027D9-7DD3-4BE9-96A0-92DF253B3564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2027D9-7DD3-4BE9-96A0-92DF253B3564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2027D9-7DD3-4BE9-96A0-92DF253B3564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2027D9-7DD3-4BE9-96A0-92DF253B3564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1421F0E6-7AC3-4500-A671-A4BB43D13CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1421F0E6-7AC3-4500-A671-A4BB43D13CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1421F0E6-7AC3-4500-A671-A4BB43D13CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1421F0E6-7AC3-4500-A671-A4BB43D13CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

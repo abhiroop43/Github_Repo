@@ -1,0 +1,30 @@
+body {
+	margin: 0;
+	padding: 0; 
+}
+.header {
+	padding: 50px 0;
+	background-color: #000;
+}
+.nav {
+	padding: 25px 0;
+	background-color: slategrey;
+	position: -webkit-sticky;
+}
+.header, .nav {
+	text-align: center;
+	color: #fff;
+}
+.content {
+	width: 600px;
+	margin: 10px auto 100px;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}

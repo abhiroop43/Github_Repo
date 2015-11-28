@@ -1,0 +1,10 @@
+
+Log Entry : 11/18/2015 9:14:12 AM
+Execption URL : http://192.168.7.186:100/VehicleMaintenance/VehicleMaintenanceRequest_ALL.aspx?MRID=VT-2015-0000003&status=1&ShowRequest=1
+Error Message  :  The SMTP host was not specified.
+Trace Stack : System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at ERPEnhancementsC_DAL.ProcessWorkflow_DAL.SendEMail_Pettycash(String _eMailID) in e:\Abhiroop\VSS\FleetManagement\App_Code\cs\ERPEnhancementsC_DAL.cs:line 951
+   at Workflow_WorkflowDetails.cmdSubmit_Click(Object sender, EventArgs e) in E:\Abhiroop\VSS\FleetManagement\Workflow\WorkflowDetails.ascx.vb:line 306
+__________________________
