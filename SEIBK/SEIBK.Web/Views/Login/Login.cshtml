@@ -1,0 +1,23 @@
+﻿@model SEIBK.Web.Models.LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <p>Please log in to access the Internet Banking features:</p>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        @Html.EditorForModel()
+        <p><input type="submit" value="Log in" /></p>
+    } 
+</body>
+</html>
