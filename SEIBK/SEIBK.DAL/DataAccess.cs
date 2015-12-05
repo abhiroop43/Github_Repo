@@ -16,7 +16,7 @@ namespace SEIBK.DAL
         }
          
 
-        public DataTable CustomerDetails(int CID)
+        public DataTable CustomerDetails(long CID)
         {
             DataTable dtOutput = new DataTable();
             dtOutput.Columns.Add("CID");
@@ -33,20 +33,20 @@ namespace SEIBK.DAL
                     select tblCustomer;
 
             DataRow dr = dtOutput.NewRow();
-            dr["CID"] = custDetails.First<tblCustomer>().ID;
-            dr["FirstName"] = custDetails.First<tblCustomer>().FirstName;
-            dr["LastName"] = custDetails.First<tblCustomer>().LastName;
-            dr["DateOfBirth"] = custDetails.First<tblCustomer>().DateOfBirth;
-            dr["Address"] = custDetails.First<tblCustomer>().Address;
-            dr["Email"] = custDetails.First<tblCustomer>().Email;
-            dr["Mobile"] = custDetails.First<tblCustomer>().Mobile;
-            dr["Status"] = custDetails.First<tblCustomer>().Status;
+            dr["CID"] = custDetails.FirstOrDefault<tblCustomer>().ID;
+            dr["FirstName"] = custDetails.FirstOrDefault<tblCustomer>().FirstName;
+            dr["LastName"] = custDetails.FirstOrDefault<tblCustomer>().LastName;
+            dr["DateOfBirth"] = custDetails.FirstOrDefault<tblCustomer>().DateOfBirth;
+            dr["Address"] = custDetails.FirstOrDefault<tblCustomer>().Address;
+            dr["Email"] = custDetails.FirstOrDefault<tblCustomer>().Email;
+            dr["Mobile"] = custDetails.FirstOrDefault<tblCustomer>().Mobile;
+            dr["Status"] = custDetails.FirstOrDefault<tblCustomer>().Status;
             dtOutput.Rows.Add(dr);
 
             return dtOutput;
         }
 
-        public DataTable GetCustomerAccountsList(int CID)
+        public DataTable GetCustomerAccountsList(long CID)
         {
             DataTable dtOutput = new DataTable();
             dtOutput.Columns.Add("AccID", typeof(long));
@@ -66,7 +66,7 @@ namespace SEIBK.DAL
                                                   join accType in model.tblAccountTypes on acct.AccountType equals accType.ID
                                                   join branch in model.tblBranchMasters on acct.Branch equals branch.ID
                                                   join curr in model.tblCurrencies on acct.CurrencyCode equals curr.ID
-                                                  where acct.Status == "A"
+                                                  where acct.Status == "A" && acct.CID == CID
                               select new { AccID = acct.AccID, AccNumber = acct.AccountNumber, Balance = acct.Balance, CreatedOn = acct.CreatedOn, eStmtSub = acct.EstatementSub, OverdrawLimit = acct.OverdrawLimit, AccountType = accType.TypeName, BranchName = branch.BranchName, BranchID = branch.ID, ISOCurrencyCode = curr.ISOCurrencyCode, CurrencyName = curr.CurrencyName };
 
             foreach (var account in accountList)
@@ -88,17 +88,55 @@ namespace SEIBK.DAL
             return dtOutput;
         }
 
-        public bool ValidateCustomerCredentials(int CID, string password)
+        public bool ValidateCustomerCredentials(long CID, string password)
         {
             bool isValid = false;
-
+            var credentials = from login in model.tblLogins
+                        where login.CID == CID && login.Password == password && login.Status == "A"
+                        select new { CID = login.CID, LastLogin = login.LastLogin, LoginAttempts = login.LoginAttempts, Islocked = login.Locked, CreateDate = login.CreatedOn };
+            if(credentials.Count() == 1)
+            {
+                isValid = true;
+            }
             return isValid;
         }
 
-        public DataTable GetAccountDetails(int CID, int AccID)
+        public DataTable GetAccountDetails(long CID, long AccID)
         {
             DataTable dtOutput = new DataTable();
+            dtOutput.Columns.Add("AccID", typeof(long));
+            dtOutput.Columns.Add("AccNumber");
+            dtOutput.Columns.Add("Balance", typeof(decimal));
+            dtOutput.Columns.Add("CreatedOn", typeof(DateTime));
+            dtOutput.Columns.Add("eStmtSub", typeof(bool));
+            dtOutput.Columns.Add("OverdrawLimit", typeof(decimal));
+            dtOutput.Columns.Add("AccountType");
+            dtOutput.Columns.Add("BranchName");
+            dtOutput.Columns.Add("BranchID", typeof(int));
+            dtOutput.Columns.Add("ISOCurrencyCode");
+            dtOutput.Columns.Add("CurrencyName");
 
+            var accountList = from cust in model.tblCustomers
+                              join acct in model.tblAccounts on cust.ID equals acct.CID
+                              join accType in model.tblAccountTypes on acct.AccountType equals accType.ID
+                              join branch in model.tblBranchMasters on acct.Branch equals branch.ID
+                              join curr in model.tblCurrencies on acct.CurrencyCode equals curr.ID
+                              where acct.Status == "A" && acct.CID == CID && acct.AccID == AccID
+                              select new { AccID = acct.AccID, AccNumber = acct.AccountNumber, Balance = acct.Balance, CreatedOn = acct.CreatedOn, eStmtSub = acct.EstatementSub, OverdrawLimit = acct.OverdrawLimit, AccountType = accType.TypeName, BranchName = branch.BranchName, BranchID = branch.ID, ISOCurrencyCode = curr.ISOCurrencyCode, CurrencyName = curr.CurrencyName };
+
+            DataRow drAccount = dtOutput.NewRow();
+            drAccount["AccID"] = accountList.FirstOrDefault().AccID;
+            drAccount["AccNumber"] = accountList.FirstOrDefault().AccNumber;
+            drAccount["Balance"] = accountList.FirstOrDefault().Balance;
+            drAccount["CreatedOn"] = accountList.FirstOrDefault().CreatedOn;
+            drAccount["eStmtSub"] = accountList.FirstOrDefault().eStmtSub;
+            drAccount["OverdrawLimit"] = accountList.FirstOrDefault().OverdrawLimit;
+            drAccount["AccountType"] = accountList.FirstOrDefault().AccountType;
+            drAccount["BranchName"] = accountList.FirstOrDefault().BranchName;
+            drAccount["BranchID"] = accountList.FirstOrDefault().BranchID;
+            drAccount["ISOCurrencyCode"] = accountList.FirstOrDefault().ISOCurrencyCode;
+            drAccount["CurrencyName"] = accountList.FirstOrDefault().CurrencyName;
+            dtOutput.Rows.Add(drAccount);
             return dtOutput;
         }
 

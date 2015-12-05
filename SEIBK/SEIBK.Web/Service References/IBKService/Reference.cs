@@ -15,67 +15,6 @@ namespace SEIBK.Web.IBKService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/SEIBK.BL")]
-    [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
-            get {
-                return this.BoolValueField;
-            }
-            set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
-            get {
-                return this.StringValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Customer", Namespace="http://schemas.datacontract.org/2004/07/SEIBK.BL")]
     [System.SerializableAttribute()]
     public partial class Customer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -231,27 +170,283 @@ namespace SEIBK.Web.IBKService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Login", Namespace="http://schemas.datacontract.org/2004/07/SEIBK.BL")]
+    [System.SerializableAttribute()]
+    public partial class Login : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool LoginSuccessField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool LoginSuccess {
+            get {
+                return this.LoginSuccessField;
+            }
+            set {
+                if ((this.LoginSuccessField.Equals(value) != true)) {
+                    this.LoginSuccessField = value;
+                    this.RaisePropertyChanged("LoginSuccess");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Account", Namespace="http://schemas.datacontract.org/2004/07/SEIBK.BL")]
+    [System.SerializableAttribute()]
+    public partial class Account : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long AccountIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AccountNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime AccountOpenDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AccountTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal BalanceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BranchIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BranchNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CurrencyNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EstatementSubscribedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ISOCurrencyCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal OverDrawLimitField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long AccountID {
+            get {
+                return this.AccountIDField;
+            }
+            set {
+                if ((this.AccountIDField.Equals(value) != true)) {
+                    this.AccountIDField = value;
+                    this.RaisePropertyChanged("AccountID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AccountNumber {
+            get {
+                return this.AccountNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AccountNumberField, value) != true)) {
+                    this.AccountNumberField = value;
+                    this.RaisePropertyChanged("AccountNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime AccountOpenDate {
+            get {
+                return this.AccountOpenDateField;
+            }
+            set {
+                if ((this.AccountOpenDateField.Equals(value) != true)) {
+                    this.AccountOpenDateField = value;
+                    this.RaisePropertyChanged("AccountOpenDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AccountType {
+            get {
+                return this.AccountTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AccountTypeField, value) != true)) {
+                    this.AccountTypeField = value;
+                    this.RaisePropertyChanged("AccountType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Balance {
+            get {
+                return this.BalanceField;
+            }
+            set {
+                if ((this.BalanceField.Equals(value) != true)) {
+                    this.BalanceField = value;
+                    this.RaisePropertyChanged("Balance");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BranchID {
+            get {
+                return this.BranchIDField;
+            }
+            set {
+                if ((this.BranchIDField.Equals(value) != true)) {
+                    this.BranchIDField = value;
+                    this.RaisePropertyChanged("BranchID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BranchName {
+            get {
+                return this.BranchNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BranchNameField, value) != true)) {
+                    this.BranchNameField = value;
+                    this.RaisePropertyChanged("BranchName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CurrencyName {
+            get {
+                return this.CurrencyNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CurrencyNameField, value) != true)) {
+                    this.CurrencyNameField = value;
+                    this.RaisePropertyChanged("CurrencyName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool EstatementSubscribed {
+            get {
+                return this.EstatementSubscribedField;
+            }
+            set {
+                if ((this.EstatementSubscribedField.Equals(value) != true)) {
+                    this.EstatementSubscribedField = value;
+                    this.RaisePropertyChanged("EstatementSubscribed");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ISOCurrencyCode {
+            get {
+                return this.ISOCurrencyCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ISOCurrencyCodeField, value) != true)) {
+                    this.ISOCurrencyCodeField = value;
+                    this.RaisePropertyChanged("ISOCurrencyCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal OverDrawLimit {
+            get {
+                return this.OverDrawLimitField;
+            }
+            set {
+                if ((this.OverDrawLimitField.Equals(value) != true)) {
+                    this.OverDrawLimitField = value;
+                    this.RaisePropertyChanged("OverDrawLimit");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IBKService.IService")]
     public interface IService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetData", ReplyAction="http://tempuri.org/IService/GetDataResponse")]
-        string GetData(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetData", ReplyAction="http://tempuri.org/IService/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService/GetDataUsingDataContractResponse")]
-        SEIBK.Web.IBKService.CompositeType GetDataUsingDataContract(SEIBK.Web.IBKService.CompositeType composite);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<SEIBK.Web.IBKService.CompositeType> GetDataUsingDataContractAsync(SEIBK.Web.IBKService.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetCustomerDetails", ReplyAction="http://tempuri.org/IService/GetCustomerDetailsResponse")]
+        SEIBK.Web.IBKService.Customer GetCustomerDetails(long CID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetCustomerDetails", ReplyAction="http://tempuri.org/IService/GetCustomerDetailsResponse")]
-        SEIBK.Web.IBKService.Customer GetCustomerDetails(int CID);
+        System.Threading.Tasks.Task<SEIBK.Web.IBKService.Customer> GetCustomerDetailsAsync(long CID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetCustomerDetails", ReplyAction="http://tempuri.org/IService/GetCustomerDetailsResponse")]
-        System.Threading.Tasks.Task<SEIBK.Web.IBKService.Customer> GetCustomerDetailsAsync(int CID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ValidateCustomerCredentials", ReplyAction="http://tempuri.org/IService/ValidateCustomerCredentialsResponse")]
+        SEIBK.Web.IBKService.Login ValidateCustomerCredentials(long CID, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ValidateCustomerCredentials", ReplyAction="http://tempuri.org/IService/ValidateCustomerCredentialsResponse")]
+        System.Threading.Tasks.Task<SEIBK.Web.IBKService.Login> ValidateCustomerCredentialsAsync(long CID, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetCustomerAccountsList", ReplyAction="http://tempuri.org/IService/GetCustomerAccountsListResponse")]
+        SEIBK.Web.IBKService.Account[] GetCustomerAccountsList(long CID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetCustomerAccountsList", ReplyAction="http://tempuri.org/IService/GetCustomerAccountsListResponse")]
+        System.Threading.Tasks.Task<SEIBK.Web.IBKService.Account[]> GetCustomerAccountsListAsync(long CID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetAccountDetails", ReplyAction="http://tempuri.org/IService/GetAccountDetailsResponse")]
+        SEIBK.Web.IBKService.Account GetAccountDetails(long CID, long AccID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetAccountDetails", ReplyAction="http://tempuri.org/IService/GetAccountDetailsResponse")]
+        System.Threading.Tasks.Task<SEIBK.Web.IBKService.Account> GetAccountDetailsAsync(long CID, long AccID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -281,28 +476,36 @@ namespace SEIBK.Web.IBKService {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
-        }
-        
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
-        }
-        
-        public SEIBK.Web.IBKService.CompositeType GetDataUsingDataContract(SEIBK.Web.IBKService.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
-        }
-        
-        public System.Threading.Tasks.Task<SEIBK.Web.IBKService.CompositeType> GetDataUsingDataContractAsync(SEIBK.Web.IBKService.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
-        }
-        
-        public SEIBK.Web.IBKService.Customer GetCustomerDetails(int CID) {
+        public SEIBK.Web.IBKService.Customer GetCustomerDetails(long CID) {
             return base.Channel.GetCustomerDetails(CID);
         }
         
-        public System.Threading.Tasks.Task<SEIBK.Web.IBKService.Customer> GetCustomerDetailsAsync(int CID) {
+        public System.Threading.Tasks.Task<SEIBK.Web.IBKService.Customer> GetCustomerDetailsAsync(long CID) {
             return base.Channel.GetCustomerDetailsAsync(CID);
+        }
+        
+        public SEIBK.Web.IBKService.Login ValidateCustomerCredentials(long CID, string password) {
+            return base.Channel.ValidateCustomerCredentials(CID, password);
+        }
+        
+        public System.Threading.Tasks.Task<SEIBK.Web.IBKService.Login> ValidateCustomerCredentialsAsync(long CID, string password) {
+            return base.Channel.ValidateCustomerCredentialsAsync(CID, password);
+        }
+        
+        public SEIBK.Web.IBKService.Account[] GetCustomerAccountsList(long CID) {
+            return base.Channel.GetCustomerAccountsList(CID);
+        }
+        
+        public System.Threading.Tasks.Task<SEIBK.Web.IBKService.Account[]> GetCustomerAccountsListAsync(long CID) {
+            return base.Channel.GetCustomerAccountsListAsync(CID);
+        }
+        
+        public SEIBK.Web.IBKService.Account GetAccountDetails(long CID, long AccID) {
+            return base.Channel.GetAccountDetails(CID, AccID);
+        }
+        
+        public System.Threading.Tasks.Task<SEIBK.Web.IBKService.Account> GetAccountDetailsAsync(long CID, long AccID) {
+            return base.Channel.GetAccountDetailsAsync(CID, AccID);
         }
     }
 }

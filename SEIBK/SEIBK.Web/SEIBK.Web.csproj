@@ -4441,10 +4441,13 @@
     <Content Include="assets\global\scripts\metronic.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Service References\IBKService\SEIBK.Web.IBKService.CompositeType.datasource">
+    <Content Include="Service References\IBKService\SEIBK.Web.IBKService.Customer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\IBKService\SEIBK.Web.IBKService.Customer.datasource">
+    <Content Include="Service References\IBKService\SEIBK.Web.IBKService.Login.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\IBKService\SEIBK.Web.IBKService.Account.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\IBKService\Service.disco" />

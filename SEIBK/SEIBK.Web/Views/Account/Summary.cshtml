@@ -27,7 +27,7 @@
             @foreach (var account in Model)
             {
                 <tr>
-                    <td>@Html.ActionLink(account.AccID.ToString(), "AccountDetails", new { accId = account.AccID })</td>
+                    <td>@Html.ActionLink("Select", "AccountDetails", new { CID = account.CID, accId = account.AccID })</td>
                     <td>@account.AccNum</td>
                     <td>@account.AccType</td>
                     <td>@account.Balance</td>

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace SEIBK.Web.Controllers
 {
+    [Authorize]
     public class LoanController : Controller
     {
         // GET: Loan

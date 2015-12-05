@@ -13,16 +13,23 @@ namespace SEIBK.BL
     public interface IService
     {
 
-        [OperationContract]
-        string GetData(int value);
+        //[OperationContract]
+        //string GetData(int value);
 
-        [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        //[OperationContract]
+        //CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
 
         [OperationContract]
-        Customer GetCustomerDetails(int CID);
+        Customer GetCustomerDetails(long CID);
+
+        [OperationContract]
+        Login ValidateCustomerCredentials(long CID, string password);
+        [OperationContract]
+        List<Account> GetCustomerAccountsList(long CID);
+        [OperationContract]
+        Account GetAccountDetails(long CID, long AccID);
     }
 
 
@@ -110,6 +117,103 @@ namespace SEIBK.BL
             get{return dob;}
             set{dob = value;}
         }
+    }
+
+    [DataContract]
+    public class Login
+    {
+        private bool loginSuccess;
+        [DataMember]
+        public bool LoginSuccess
+        {
+            get { return loginSuccess; }
+            set { loginSuccess = value; }
+        }       
+        
+    }
+
+    [DataContract]
+    public class Account
+    {
+        private long accID;
+        [DataMember]
+        public long AccountID
+        {
+            get { return accID; }
+            set { accID = value; }
+        }
+        private string accNum;
+        [DataMember]
+        public string AccountNumber
+        {
+            get { return accNum; }
+            set { accNum = value; }
+        }
+        private decimal bal;
+        [DataMember]
+        public decimal Balance
+        {
+            get { return bal; }
+            set { bal = value; }
+        }
+        private DateTime openDate;
+        [DataMember]
+        public DateTime AccountOpenDate
+        {
+            get { return openDate; }
+            set { openDate = value; }
+        }
+        private bool estmtSub;
+        [DataMember]
+        public bool EstatementSubscribed
+        {
+            get { return estmtSub; }
+            set { estmtSub = value; }
+        }
+        private decimal overdraw;
+        [DataMember]
+        public decimal OverDrawLimit
+        {
+            get { return overdraw; }
+            set { overdraw = value; }
+        }
+
+        private string accTyp;
+        [DataMember]
+        public string AccountType
+        {
+            get { return accTyp; }
+            set { accTyp = value; }
+        }
+        private string branch;
+        [DataMember]
+        public string BranchName
+        {
+            get { return branch; }
+            set { branch = value; }
+        }
+        private int branchID;
+        [DataMember]
+        public int BranchID
+        {
+            get { return branchID; }
+            set { branchID = value; }
+        }
+        private string isoCurr;
+        [DataMember]
+        public string ISOCurrencyCode
+        {
+            get { return isoCurr; }
+            set { isoCurr = value; }
+        }
+        private string currName;
+        [DataMember]
+        public string CurrencyName
+        {
+            get { return currName; }
+            set { currName = value; }
+        }
+        
     }
     
 }

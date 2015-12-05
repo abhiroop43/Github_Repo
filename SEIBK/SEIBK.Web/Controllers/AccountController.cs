@@ -6,55 +6,58 @@ using System.Web.Mvc;
 using SEIBK.Web.Models;
 using System.Data.SqlClient;
 using System.Data;
+using SEIBK.Web.IBKService;
 
 namespace SEIBK.Web.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
         // GET: Account
         public ActionResult Summary()
         {
-            int CID = 10001;
-            SqlConnection con = new SqlConnection("Server=homePC;Database=BITS_IBK;User Id=sa;Password=abcd1234");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("Select Acc.AccID, Acc.CID, Acc.AccountNumber, AccType.TypeName AccountType, Acc.Balance from tblAccount Acc inner join tblAccountType AccType on Acc.AccountType=AccType.ID where CID = " + CID, con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            con.Close();
-            con.Dispose();
-            //Account []acc = new Account[dt.Rows.Count];
+            long CID = Convert.ToInt64(Session["CID"]);
+            //SqlConnection con = new SqlConnection("Server=homePC;Database=BITS_IBK;User Id=sa;Password=abcd1234");
+            //con.Open();
+            //SqlCommand cmd = new SqlCommand("Select Acc.AccID, Acc.CID, Acc.AccountNumber, AccType.TypeName AccountType, Acc.Balance from tblAccount Acc inner join tblAccountType AccType on Acc.AccountType=AccType.ID where CID = " + CID, con);
+            //SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //DataTable dt = new DataTable();
+            //da.Fill(dt);
+            //con.Close();
+            //con.Dispose();
 
-            //for (int i = 0; i < dt.Rows.Count; i++)
-            //{
-            //    acc[i].AccID = (long)dt.Rows[0]["AccID"];
-            //    acc[i].AccNum = (string)dt.Rows[0]["AccountNumber"];
-            //}
-
-            var accounts = new List<Account>();
-
-            foreach(DataRow dr in dt.Rows)
+            using (ServiceClient objProxy = new ServiceClient())
             {
-                accounts.Add(new Account() { AccID = (long)dr["AccID"], AccNum = (string)dr["AccountNumber"], AccType = (string)dr["AccountType"], Balance = Math.Round((decimal)dr["Balance"], 2) });
-            }
+                List<IBKService.Account> accountList = objProxy.GetCustomerAccountsList(CID).ToList<IBKService.Account>();
+                var accounts = new List<Models.Account>();
 
-            return View(accounts);
+                foreach (IBKService.Account account in accountList)
+                {
+                    accounts.Add(new Models.Account() { CID = Convert.ToInt64(Session["CID"]), AccID = (long)account.AccountID, AccNum = (string)account.AccountNumber, AccType = (string)account.AccountType, Balance = Math.Round((decimal)account.Balance, 2) });
+                }
+
+                return View(accounts);
+            }
         }
 
-        public ActionResult AccountDetails(int accId)
+        public ActionResult AccountDetails(long CID, long accId)
         {
-            SqlConnection con = new SqlConnection("Server=homePC;Database=BITS_IBK;User Id=sa;Password=abcd1234");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("Select Acc.AccID, Acc.CID, Acc.AccountNumber, AccType.TypeName AccountType, Acc.Balance from tblAccount Acc inner join tblAccountType AccType on Acc.AccountType=AccType.ID where AccID = " + accId, con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            con.Close();
-            con.Dispose();
-            Account acc = new Account();
-            acc.AccID = (long)dt.Rows[0]["AccID"];
-            acc.AccNum = (string)dt.Rows[0]["AccountNumber"];
-            return View(acc);
+            if(CID == Convert.ToInt64(Session["CID"]))
+            {
+                using (ServiceClient objProxy = new ServiceClient())
+                {
+                    IBKService.Account account = objProxy.GetAccountDetails(CID, accId);
+                    Models.Account acc = new Models.Account();
+                    acc.AccID = (long)account.AccountID;
+                    acc.AccNum = (string)account.AccountNumber;
+                    return View(acc);
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("message", "You are not authorized to view this account");
+                return View();
+            }
         }
     }
 }
