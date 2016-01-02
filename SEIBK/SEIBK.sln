@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEIBK.Web", "SEIBK.Web\SEIB
 		{74150BCB-DB35-4884-8DEF-0C7D638AB62D} = {74150BCB-DB35-4884-8DEF-0C7D638AB62D}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEIBK.BL.API", "SEIBK.BL.API\SEIBK.BL.API.csproj", "{C6C13097-D4A7-4931-BFFD-4423A760682A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{81664A4C-7A31-41F7-B659-055C775E34D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81664A4C-7A31-41F7-B659-055C775E34D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81664A4C-7A31-41F7-B659-055C775E34D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6C13097-D4A7-4931-BFFD-4423A760682A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6C13097-D4A7-4931-BFFD-4423A760682A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6C13097-D4A7-4931-BFFD-4423A760682A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6C13097-D4A7-4931-BFFD-4423A760682A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
