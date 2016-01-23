@@ -73,15 +73,7 @@ astApp.controller('ApplicationsController', function ($scope, $http, $timeout, $
     self.searchCourseCategoryChange = searchCourseCategoryChange;
 
     function courseCategorySearch(query) {
-        var results = query ? self.courseCategories.filter(createCourseCategoryFilterFor(query)) : self.courseCategories,
-            deferred;
-        //if (self.simulateQuery) {
-        //    deferred = $q.defer();
-        //    $timeout(function () { deferred.resolve(results); }, Math.random() * 1000, false);
-        //    return deferred.promise;
-        //} else {
-        //    return results;
-        //}
+        var results = query ? self.courseCategories.filter(createCourseCategoryFilterFor(query)) : self.courseCategories;
         return results;
     }
     function searchCourseCategoryChange(text) {
@@ -179,6 +171,43 @@ astApp.controller('ApplicationsController', function ($scope, $http, $timeout, $
             st._lowertype = st.type.toLowerCase();
             return st;
         });
+    }
+
+
+    //Courses//
+    self.courses = loadAllCourses();
+    self.courseSearch = courseSearch;
+    self.selectedCourseChange = selectedCourseChange;
+    self.searchCourseChange = searchCourseChange;
+
+    function courseSearch(query) {
+        var results = query ? self.courses.filter(createCourseFilterFor(query)) : self.courses;
+        return results;
+    }
+    function searchCourseChange(text) {
+        $log.info('Region Text changed to ' + text);
+    }
+    function selectedCourseChange(item) {
+        $log.info('Region Item changed to ' + JSON.stringify(item));
+    }
+
+    function loadAllCourses() {
+        var allCourses = '2010 - course1, 2011 - course2, 2012 - course3, 2014 - course4';
+        return allCourses.split(/, +/g).map(function (courses) {
+            var index = 1;
+            return {
+                value: courses.toLowerCase(),
+                //value: index++,
+                display: courses
+            };
+        });
+    }
+
+    function createCourseFilterFor(query) {
+        var lowercaseQuery = angular.lowercase(query);
+        return function filterFn(courseCategories) {
+            return (courseCategories.value.indexOf(lowercaseQuery) === 0);
+        };
     }
 
 });

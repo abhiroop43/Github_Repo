@@ -99,7 +99,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group" layout="row">
-                                <label class="control-label">Feedback Status</label>
+                                <label class="control-label" style="white-space: nowrap">Feedback Status</label>
                                 <div class="container">
                                     <md-switch ng-model="data.cb1" aria-label="fbPending" class="md-primary" id="fbPending">
                                         Pending
@@ -138,7 +138,80 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
+                                <md-autocomplete flex
+                                                 md-no-cache="ctrl.noCache"
+                                                 md-selected-item="ctrl.selectedCourse"
+                                                 md-search-text-change="ctrl.searchCourseChange(ctrl.searchCourse)"
+                                                 md-search-text="ctrl.searchCourse"
+                                                 md-selected-item-change="ctrl.selectedCourseChange(item)"
+                                                 md-items="item in ctrl.courseSearch(ctrl.searchCourse)"
+                                                 md-item-text="item.display"
+                                                 md-min-length="0"
+                                                 md-floating-label="Select Course Category">
+                                    <md-item-template>
+                                        <span md-highlight-text="ctrl.searchCourse" md-highlight-flags="^i">{{item.display}}</span>
+                                    </md-item-template>
+                                    <md-not-found>
+                                        No courses matching "{{ctrl.searchCourse}}" were found.
+                                    </md-not-found>
+                                </md-autocomplete>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block">
+                                    <label>Training Reference</label>
+                                    <input id="txtTrainingRef">
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block">
+                                    <label>Course Name</label>
+                                    <input id="txtCourseName">
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block">
+                                    <label>Course Reference</label>
+                                    <input id="txtCourseRef">
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block">
+                                    <label>Application Reference</label>
+                                    <input id="txtApplicationRef">
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block">
+                                    <label>Application ID</label>
+                                    <input id="txtApplicationID">
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block">
+                                    <label>Application Name</label>
+                                    <input id="txtApplicationName">
+                                </md-input-container>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -151,25 +224,18 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-
+                                <md-input-container class="md-block">
+                                    <label>Training Start Date</label>
+                                    <input id="txtTrngStartDate" type="date">
+                                </md-input-container>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-
+                                <md-input-container class="md-block">
+                                    <label>Training End Date</label>
+                                    <input id="txtTrngEndDate" type="date">
+                                </md-input-container>
                             </div>
                         </div>
                     </div>
@@ -177,38 +243,18 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-
+                                <md-input-container class="md-block">
+                                    <label>Submission Start Date</label>
+                                    <input id="txtSubStartDate" type="date">
+                                </md-input-container>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-
+                                <md-input-container class="md-block">
+                                    <label>Submission Start Date</label>
+                                    <input id="txtSubEndDate" type="date">
+                                </md-input-container>
                             </div>
                         </div>
                     </div>
@@ -220,7 +266,7 @@
                         <i class="fa fa-check"></i> Save
                     </button>-->
                     <md-button class="md-raised">Cancel</md-button>
-                    <md-button class="md-raised md-primary"><i class="fa fa-check"></i> Save</md-button>
+                    <md-button class="md-raised md-primary"><i class="fa fa-search"></i> Search</md-button>
                 </div>
 
             </form>
