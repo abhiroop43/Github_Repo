@@ -32,6 +32,11 @@ namespace SEIBK.DAL
                     where tblCustomer.ID == CID
                     select tblCustomer;
 
+            if(custDetails == null || custDetails.Count<tblCustomer>() == 0)
+            {
+                return null;
+            }
+
             DataRow dr = dtOutput.NewRow();
             dr["CID"] = custDetails.FirstOrDefault<tblCustomer>().ID;
             dr["FirstName"] = custDetails.FirstOrDefault<tblCustomer>().FirstName;
@@ -68,6 +73,11 @@ namespace SEIBK.DAL
                                                   join curr in model.tblCurrencies on acct.CurrencyCode equals curr.ID
                                                   where acct.Status == "A" && acct.CID == CID
                               select new { AccID = acct.AccID, AccNumber = acct.AccountNumber, Balance = acct.Balance, CreatedOn = acct.CreatedOn, eStmtSub = acct.EstatementSub, OverdrawLimit = acct.OverdrawLimit, AccountType = accType.TypeName, BranchName = branch.BranchName, BranchID = branch.ID, ISOCurrencyCode = curr.ISOCurrencyCode, CurrencyName = curr.CurrencyName };
+
+            if (accountList == null || accountList.Count() == 0)
+            {
+                return null;
+            }
 
             foreach (var account in accountList)
             {
@@ -123,6 +133,11 @@ namespace SEIBK.DAL
                               join curr in model.tblCurrencies on acct.CurrencyCode equals curr.ID
                               where acct.Status == "A" && acct.CID == CID && acct.AccID == AccID
                               select new { AccID = acct.AccID, AccNumber = acct.AccountNumber, Balance = acct.Balance, CreatedOn = acct.CreatedOn, eStmtSub = acct.EstatementSub, OverdrawLimit = acct.OverdrawLimit, AccountType = accType.TypeName, BranchName = branch.BranchName, BranchID = branch.ID, ISOCurrencyCode = curr.ISOCurrencyCode, CurrencyName = curr.CurrencyName };
+
+            if (accountList == null || accountList.Count() == 0)
+            {
+                return null;
+            }
 
             DataRow drAccount = dtOutput.NewRow();
             drAccount["AccID"] = accountList.FirstOrDefault().AccID;

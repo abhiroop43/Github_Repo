@@ -40,17 +40,22 @@ namespace SEIBK.BL.API.Controllers
                             account.CurrencyName = drAccount["CurrencyName"].ToString();
                             accounts.Add(account);
                         }
-                    }
-
-                    if (accounts == null)
-                    {
-                        msg = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Accounts not found!");
-
+                        msg = Request.CreateResponse<List<Account>>(HttpStatusCode.OK, accounts);
                     }
                     else
                     {
-                        msg = Request.CreateResponse<List<Account>>(HttpStatusCode.OK, accounts);
+                        msg = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Accounts not found!");
                     }
+
+                    //if (accounts == null)
+                    //{
+                    //    msg = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Accounts not found!");
+
+                    //}
+                    //else
+                    //{
+                    //    msg = Request.CreateResponse<List<Account>>(HttpStatusCode.OK, accounts);
+                    //}
                 }
             }
             catch (Exception ex)
@@ -84,17 +89,22 @@ namespace SEIBK.BL.API.Controllers
                         account.BranchID = Convert.ToInt32(dtAccount.Rows[0]["BranchID"]);
                         account.ISOCurrencyCode = dtAccount.Rows[0]["ISOCurrencyCode"].ToString();
                         account.CurrencyName = dtAccount.Rows[0]["CurrencyName"].ToString();
+                        msg = Request.CreateResponse<Account>(HttpStatusCode.OK, account);
+                    }
+                    else
+                    {
+                        msg = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Account not found!");
                     }
                 }
-                if (account == null)
-                {
-                    msg = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Account not found!");
+                //if (account == null)
+                //{
+                //    msg = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Account not found!");
 
-                }
-                else
-                {
-                    msg = Request.CreateResponse<Account>(HttpStatusCode.OK, account);
-                }
+                //}
+                //else
+                //{
+                //    msg = Request.CreateResponse<Account>(HttpStatusCode.OK, account);
+                //}
             }
             catch (Exception ex)
             {

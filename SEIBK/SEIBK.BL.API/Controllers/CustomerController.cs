@@ -32,18 +32,22 @@ namespace SEIBK.BL.API.Controllers
                         customer.Email = (string)dtOutput.Rows[0]["Email"];
                         customer.DateOfBirth = (DateTime)dtOutput.Rows[0]["DateOfBirth"];
                         customer.Status = (string)dtOutput.Rows[0]["Status"];
-                    }
-
-                    //msg = Request.CreateResponse<Customer>(HttpStatusCode.OK, customer);
-                    if (customer == null)
-                    {
-                        msg = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Customer not found!");
-
+                        msg = Request.CreateResponse<Customer>(HttpStatusCode.OK, customer);
                     }
                     else
                     {
-                        msg = Request.CreateResponse<Customer>(HttpStatusCode.OK, customer);
+                        msg = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Customer not found!");
                     }
+                    //msg = Request.CreateResponse<Customer>(HttpStatusCode.OK, customer);
+                    //if (customer == null)
+                    //{
+                    //    msg = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Customer not found!");
+
+                    //}
+                    //else
+                    //{
+                    //    msg = Request.CreateResponse<Customer>(HttpStatusCode.OK, customer);
+                    //}
                 }
             }
             catch (Exception ex)
