@@ -1,0 +1,15 @@
+﻿<md-autocomplete flex
+                 md-input-name="autocompleteField"
+                 md-no-cache="noCache"
+                 md-selected-item="selectedCourseCategory"
+                 md-search-text="searchCourseCategory"
+                 md-search-text-change="searchCourseCategoryChange(searchCourseCategory)"
+                 md-selected-item-change="selectedCourseCategoryChange(item)"
+                 md-items="item in courseCategorySearch(searchCourseCategory)"
+                 md-item-text="item.display"
+                 
+                 md-floating-label="Select Course Category">
+    <md-item-template>
+        <span md-highlight-text="searchCourseCategory">{{item.display}}</span>
+    </md-item-template>
+</md-autocomplete>

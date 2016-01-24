@@ -112,7 +112,7 @@ astApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', func
                 '$ocLazyLoad', function ($ocLazyLoad) {
                     return $ocLazyLoad.load({
                         name: 'astApp',
-                        insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                        insertBefore: '#ng_load_plugins_before', // load before '#ng_load_plugins_before'
                         files: [
                             'scripts/controllers/ApplicationsController.js'
                         ]
@@ -120,7 +120,27 @@ astApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', func
                 }
             ]
         }
-    })    
+    })
+    .state('courses-list', {
+        url: "/courses-list",
+        templateUrl: "templates/courses-list.html",
+        data: { pageTitle: 'Courses', pageSubTitle: 'View List of Courses' },
+        controller: "CoursesController",
+        controllerAs: "coursesCtrl",
+        resolve: {
+            deps: [
+                '$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name: 'astApp',
+                        insertBefore: '#ng_load_plugins_before',
+                        files: [
+                            'scripts/controllers/CoursesController.js'
+                        ]
+                    });
+                }
+            ]
+        }
+            })
         ;
 
     
