@@ -1,0 +1,17 @@
+<md-autocomplete
+        md-input-name="autocompleteRegion"
+        md-no-cache="noCache"
+        md-selected-item="selectedRegion"
+        md-search-text-change="searchRegionChange(searchRegion)"
+        md-search-text="searchRegion"
+        md-selected-item-change="selectedRegionChange(item)"
+        md-items="item in regionSearch(searchRegion)"
+        md-item-text="item.display"
+        md-floating-label="Select Region">
+    <md-item-template>
+        <span md-highlight-text="ctrl.searchRegion" md-highlight-flags="^i">{{item.display}}</span>
+    </md-item-template>
+    <md-not-found>
+        No regions matching "{{searchRegion}}" were found.
+    </md-not-found>
+</md-autocomplete>
