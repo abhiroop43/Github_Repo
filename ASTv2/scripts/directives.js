@@ -14,7 +14,8 @@ astApp.directive('ngSpinnerBar', [
                 element.addClass('hide'); // hide spinner bar by default
                 //console.log($rootScope.state);
                 // display the spinner bar whenever the route changes(the content part started loading)
-                $rootScope.$on('$stateChangeStart', function() {
+                $rootScope.$on('$stateChangeStart', function () {
+                    $('body').addClass('page-on-load');// add page loading indicator
                     element.removeClass('hide'); // show spinner bar
                     //Layout.closeMainMenu();
                 });

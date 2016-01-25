@@ -1,4 +1,4 @@
-﻿<md-autocomplete flex
+﻿<md-autocomplete
                  md-input-name="autocompleteField"
                  md-no-cache="noCache"
                  md-selected-item="selectedCourseCategory"
@@ -7,9 +7,11 @@
                  md-selected-item-change="selectedCourseCategoryChange(item)"
                  md-items="item in courseCategorySearch(searchCourseCategory)"
                  md-item-text="item.display"
-                 
                  md-floating-label="Select Course Category">
     <md-item-template>
         <span md-highlight-text="searchCourseCategory">{{item.display}}</span>
     </md-item-template>
+    <md-not-found>
+        No course categories matching "{{searchCourseCategory}}" were found.
+    </md-not-found>
 </md-autocomplete>

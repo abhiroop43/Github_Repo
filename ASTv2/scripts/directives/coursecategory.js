@@ -25,7 +25,7 @@ astApp.directive('coursecategory', ['$log', function($log) {
              * Build `regions` list of key/value pairs
              */
             function loadAllCourseCategories() {
-                var allCourseCategories = 'test1, test2, test3, test4';
+                var allCourseCategories = 'General, Safety, Security, Airlines Management, Air Navigation Services, Airports, Cargo & Dangerous Goods';
                 return allCourseCategories.split(/, +/g).map(function (courseCategories) {
                     var index = 1;
                     return {

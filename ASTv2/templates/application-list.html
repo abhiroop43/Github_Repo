@@ -32,24 +32,25 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <md-autocomplete
-                                                 md-input-name="autocompleteRegion"
-                                                 md-no-cache="ctrl.noCache"
-                                                 md-selected-item="ctrl.selectedRegion"
-                                                 md-search-text-change="ctrl.searchRegionChange(ctrl.searchRegion)"
-                                                 md-search-text="ctrl.searchRegion"
-                                                 md-selected-item-change="ctrl.selectedRegionChange(item)"
-                                                 md-items="item in ctrl.regionSearch(ctrl.searchRegion)"
-                                                 md-item-text="item.display"
-                                                 md-min-length="0"
-                                                 md-floating-label="Select Region">
+                                <!--<md-autocomplete
+                                        md-input-name="autocompleteRegion"
+                                        md-no-cache="ctrl.noCache"
+                                        md-selected-item="ctrl.selectedRegion"
+                                        md-search-text-change="ctrl.searchRegionChange(ctrl.searchRegion)"
+                                        md-search-text="ctrl.searchRegion"
+                                        md-selected-item-change="ctrl.selectedRegionChange(item)"
+                                        md-items="item in ctrl.regionSearch(ctrl.searchRegion)"
+                                        md-item-text="item.display"
+                                        md-min-length="0"
+                                        md-floating-label="Select Region">
                                     <md-item-template>
                                         <span md-highlight-text="ctrl.searchRegion" md-highlight-flags="^i">{{item.display}}</span>
                                     </md-item-template>
                                     <md-not-found>
                                         No regions matching "{{ctrl.searchRegion}}" were found.
                                     </md-not-found>
-                                </md-autocomplete>
+                                </md-autocomplete>-->
+                                <regionselect></regionselect>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -266,7 +267,7 @@
                     <button type="submit" class="btn blue">
                         <i class="fa fa-check"></i> Save
                     </button>-->
-                    <md-button class="md-raised">Cancel</md-button>
+                    <md-button class="md-raised">Reset</md-button>
                     <md-button class="md-raised md-primary"><i class="fa fa-search"></i> Search</md-button>
                 </div>
 

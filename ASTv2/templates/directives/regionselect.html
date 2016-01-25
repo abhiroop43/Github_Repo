@@ -7,9 +7,9 @@
         md-selected-item-change="selectedRegionChange(item)"
         md-items="item in regionSearch(searchRegion)"
         md-item-text="item.display"
-        md-floating-label="Select Region">
+    md-floating-label="Select Region">
     <md-item-template>
-        <span md-highlight-text="ctrl.searchRegion" md-highlight-flags="^i">{{item.display}}</span>
+        <span md-highlight-text="searchRegion" md-highlight-flags="^i">{{item.display}}</span>
     </md-item-template>
     <md-not-found>
         No regions matching "{{searchRegion}}" were found.
