@@ -144,7 +144,7 @@
                 <li class="dropdown dropdown-user dropdown-dark">
                     <a href="javascript:;" class="dropdown-toggle" dropdown-menu-hover data-toggle="dropdown" data-close-others="true">
                         <img alt="" class="img-circle" src="../../../assets/admin/layout3/img/avatar9.jpg">
-                        <span class="username username-hide-mobile">Nick</span>
+                        <span class="username username-hide-mobile">{{loggedInUser.Name}}</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-default">
                         <li>
@@ -256,7 +256,7 @@
                     </a>
                     <ul class="dropdown-menu pull-left">
                         <li>
-                            <a ui-sref="courses-list" ui-sref-opts="{reload: true}" class="noTextWrap">
+                            <a ui-sref="courses-list" class="noTextWrap">
                                 <i class="icon-user"></i>
                                 Setup Courses
                             </a>
@@ -304,7 +304,7 @@
                     </a>
                     <ul class="dropdown-menu pull-left">
                         <li>
-                            <a href="/application-list?st=1" class="noTextWrap">
+                            <a ui-sref="regions" class="noTextWrap">
                                 <i class="icon-user"></i>
                                 Setup Regions
                             </a>
