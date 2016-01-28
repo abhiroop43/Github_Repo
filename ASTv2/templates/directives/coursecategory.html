@@ -7,7 +7,7 @@
                  md-selected-item-change="selectedCourseCategoryChange(item)"
                  md-items="item in courseCategorySearch(searchCourseCategory)"
                  md-item-text="item.display"
-                 md-floating-label="Select Course Category">
+                 md-floating-label="{{'placeholders.SELECT_COURSE_CAT' | translate}}">
     <md-item-template>
         <span md-highlight-text="searchCourseCategory">{{item.display}}</span>
     </md-item-template>

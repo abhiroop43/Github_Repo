@@ -32,30 +32,12 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <!--<md-autocomplete
-                                        md-input-name="autocompleteRegion"
-                                        md-no-cache="ctrl.noCache"
-                                        md-selected-item="ctrl.selectedRegion"
-                                        md-search-text-change="ctrl.searchRegionChange(ctrl.searchRegion)"
-                                        md-search-text="ctrl.searchRegion"
-                                        md-selected-item-change="ctrl.selectedRegionChange(item)"
-                                        md-items="item in ctrl.regionSearch(ctrl.searchRegion)"
-                                        md-item-text="item.display"
-                                        md-min-length="0"
-                                        md-floating-label="Select Region">
-                                    <md-item-template>
-                                        <span md-highlight-text="ctrl.searchRegion" md-highlight-flags="^i">{{item.display}}</span>
-                                    </md-item-template>
-                                    <md-not-found>
-                                        No regions matching "{{ctrl.searchRegion}}" were found.
-                                    </md-not-found>
-                                </md-autocomplete>-->
                                 <regionselect></regionselect>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <md-select placeholder="Select Member State" ng-model="memberState">
+                                <md-select placeholder="{{'placeholders.MEMBER_STATE_SELECT' | translate}}" ng-model="memberState">
                                     <md-option value="1">Member A</md-option>
                                     <md-option value="2">Member B</md-option>
                                     <md-option value="6">Lebanon</md-option>
@@ -67,7 +49,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <md-select placeholder="Select Organization" ng-model="organization">
+                                <md-select placeholder="{{'placeholders.SELECT_ORG' | translate}}" ng-model="organization">
                                     <!--<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>-->
                                     <md-option value="1">Dubai Civil Aviation</md-option>
                                     <md-option value="2">Pakistan Civil Aviation</md-option>
@@ -76,23 +58,6 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <!--<md-autocomplete
-                                        md-no-cache="ctrl.noCache"
-                                        md-selected-item="ctrl.selectedCourseCategory"
-                                        md-search-text-change="ctrl.searchCourseCategoryChange(ctrl.searchCourseCategory)"
-                                        md-search-text="ctrl.searchCourseCategory"
-                                        md-selected-item-change="ctrl.selectedCourseCategoryChange(item)"
-                                        md-items="item in ctrl.courseCategorySearch(ctrl.searchCourseCategory)"
-                                        md-item-text="item.display"
-                                        md-min-length="0"
-                                        md-floating-label="Select Course Category">
-                                    <md-item-template>
-                                        <span md-highlight-text="ctrl.searchCourseCategory" md-highlight-flags="^i">{{item.display}}</span>
-                                    </md-item-template>
-                                    <md-not-found>
-                                        No course categories matching "{{ctrl.searchCourseCategory}}" were found.
-                                    </md-not-found>
-                                </md-autocomplete>-->
                                 <coursecategory></coursecategory>
                             </div>
                         </div>
@@ -101,13 +66,13 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group" layout="row">
-                                <label class="control-label" style="white-space: nowrap">Feedback Status</label>
+                                <label class="control-label" style="white-space: nowrap">{{'placeholders.FEEDBACK_STATUS.FBS_LABEL' | translate}}</label>
                                 <div class="container">
                                     <md-switch ng-model="data.cb1" aria-label="fbPending" class="md-primary" id="fbPending">
-                                        Pending
+                                        {{'placeholders.FEEDBACK_STATUS.PENDING' | translate}}
                                     </md-switch>
                                     <md-switch ng-model="data.cb2" aria-label="fbCompleted" class="md-primary" id="fbCompleted">
-                                        Completed
+                                        {{'placeholders.FEEDBACK_STATUS.COMPLETED' | translate}}
                                     </md-switch>
                                 </div>
                             </div>
@@ -121,7 +86,7 @@
                                                      md-search-text="ctrl.searchText"
                                                      md-items="item in ctrl.queryStatusSearch(ctrl.searchText)"
                                                      md-item-text="item.name"
-                                                     placeholder="Search for a status">
+                                                     placeholder="{{'placeholders.STATUS_SEARCH' | translate}}">
                                         <!--<span md-highlight-text="ctrl.searchText">{{item.name}} :: {{item.type}}</span>-->
                                         <span md-highlight-text="ctrl.searchText">{{item.name}}</span>
                                     </md-autocomplete>
@@ -149,7 +114,7 @@
                                                  md-items="item in ctrl.courseSearch(ctrl.searchCourse)"
                                                  md-item-text="item.display"
                                                  md-min-length="0"
-                                                 md-floating-label="Select Course Category">
+                                                 md-floating-label="{{'placeholders.COURSE_SELECT' | translate}}">
                                     <md-item-template>
                                         <span md-highlight-text="ctrl.searchCourse" md-highlight-flags="^i">{{item.display}}</span>
                                     </md-item-template>
@@ -162,7 +127,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <md-input-container class="md-block">
-                                    <label>Training Reference</label>
+                                    <label>{{'placeholders.TRNG_REF' | translate}}</label>
                                     <input id="txtTrainingRef">
                                 </md-input-container>
                             </div>
@@ -173,7 +138,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <md-input-container class="md-block">
-                                    <label>Course Name</label>
+                                    <label>{{'placeholders.COURSE_NAME' | translate}}</label>
                                     <input id="txtCourseName">
                                 </md-input-container>
                             </div>
@@ -181,7 +146,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <md-input-container class="md-block">
-                                    <label>Course Reference</label>
+                                    <label>{{'placeholders.COURSE_REF' | translate}}</label>
                                     <input id="txtCourseRef">
                                 </md-input-container>
                             </div>
@@ -192,7 +157,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <md-input-container class="md-block">
-                                    <label>Application Reference</label>
+                                    <label>{{'placeholders.APP_REF' | translate}}</label>
                                     <input id="txtApplicationRef">
                                 </md-input-container>
                             </div>
@@ -200,7 +165,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <md-input-container class="md-block">
-                                    <label>Application ID</label>
+                                    <label>{{'placeholders.APP_ID' | translate}}</label>
                                     <input id="txtApplicationID">
                                 </md-input-container>
                             </div>
@@ -211,7 +176,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <md-input-container class="md-block">
-                                    <label>Application Name</label>
+                                    <label>{{'placeholders.APP_NAME' | translate}}</label>
                                     <input id="txtApplicationName">
                                 </md-input-container>
                             </div>
@@ -227,7 +192,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <md-input-container class="md-block">
-                                    <label>Training Start Date</label>
+                                    <label>{{'placeholders.TRNG_START_DT' | translate}}</label>
                                     <input id="txtTrngStartDate" type="date">
                                 </md-input-container>
                             </div>
@@ -235,7 +200,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <md-input-container class="md-block">
-                                    <label>Training End Date</label>
+                                    <label>{{'placeholders.TRNG_END_DT' | translate}}</label>
                                     <input id="txtTrngEndDate" type="date">
                                 </md-input-container>
                             </div>
@@ -246,7 +211,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <md-input-container class="md-block">
-                                    <label>Submission Start Date</label>
+                                    <label>{{'placeholders.SUB_START_DT' | translate}}</label>
                                     <input id="txtSubStartDate" type="date">
                                 </md-input-container>
                             </div>
@@ -254,7 +219,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <md-input-container class="md-block">
-                                    <label>Submission Start Date</label>
+                                    <label>{{'placeholders.SUB_END_DT' | translate}}</label>
                                     <input id="txtSubEndDate" type="date">
                                 </md-input-container>
                             </div>
@@ -267,8 +232,8 @@
                     <button type="submit" class="btn blue">
                         <i class="fa fa-check"></i> Save
                     </button>-->
-                    <md-button class="md-raised">Reset</md-button>
-                    <md-button class="md-raised md-primary"><i class="fa fa-search"></i> Search</md-button>
+                    <md-button class="md-raised">{{'buttons.RESET_BTN' | translate}}</md-button>
+                    <md-button class="md-raised md-primary"><i class="fa fa-search"></i> {{'buttons.SEARCH_BTN' | translate}}</md-button>
                 </div>
 
             </form>

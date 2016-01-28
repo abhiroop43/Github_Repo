@@ -13,9 +13,6 @@ astApp.controller('RegionsController', function ($scope, $http, Restangular, aut
     });
 
 
-
-
-
     //var currentUser = Restangular.one("users/current");
     //currentUser.get().then(function (usr) {
     //    $scope.regions = usr;

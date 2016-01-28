@@ -5,6 +5,7 @@ astApp.controller('ApplicationsController', function ($scope, $http, $timeout, $
         //// initialize core components
         //Metronic.initAjax();
     });
+
     if ($state.params.st != undefined) {
         console.log($state.params.st);
     }

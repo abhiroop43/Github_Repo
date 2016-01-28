@@ -1,0 +1,29 @@
+﻿{
+  "placeholders": {
+    "REGION_SELECT": "حدد المنطقة",
+    "MEMBER_STATE_SELECT": "اختر دولة عضو",
+    "SELECT_ORG": "حدد المؤسسة",
+    "SELECT_COURSE_CAT": "حدد فئة المساق",
+    "FEEDBACK_STATUS": {
+      "FBS_LABEL": "ردود الفعل الحالة",
+      "PENDING": "بانتظار",
+      "COMPLETED": "منجز"
+    },
+    "STATUS_SEARCH": "بحث عن الحالة",
+    "COURSE_SELECT": "اختر دورة",
+    "TRNG_REF": "التدريب المرجعي",
+    "COURSE_NAME": "اسم المساق",
+    "COURSE_REF": "المرجع بالطبع",
+    "APP_REF": "تطبيق المرجعي",
+    "APP_ID": "ID تطبيق",
+    "APP_NAME": "اسم التطبيق",
+    "TRNG_START_DT": "التدريب تاريخ البدء",
+    "TRNG_END_DT": "التدريب تاريخ الانتهاء",
+    "SUB_START_DT": "تقديم تاريخ البدء",
+    "SUB_END_DT": "تاريخ التقديم نهاية"
+  },
+  "buttons": {
+    "SEARCH_BTN": "البحث عن",
+    "RESET_BTN": "إعادة تعيين"
+  }
+}

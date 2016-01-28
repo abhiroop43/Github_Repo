@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Login</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script src="assets/global/plugins/angularjs/angular.min.js" type="text/javascript"></script>
+    <script src="scripts/app.js" type="text/javascript"></script>
+    <script src="scripts/services/authentication.js"></script>
+<script>
+    angular.module('login', []).run(["$window", "authentication", function($window, authentication) {
+
+        if ($window.sessionStorage["user"] == undefined) {
+            authentication.login().then(function (data) {
+                $window.sessionStorage["user"] = JSON.stringify(data);
+                if (data.UserRoleID != 6) {
+                    $window.location.href = "http://www.google.com/";
+                } else {
+                    $window.location.href = "/";
+                }
+                //console.log(data);
+            });
+        } else {
+            var user = JSON.parse($window.sessionStorage["user"]);
+            if (user.UserRoleID != 6) {
+                $window.location.href = "http://www.google.com/";
+            } else {
+                $window.location.href = "/";
+            }
+        }
+
+    }]);
+
+</script>
+</body>
+</html>

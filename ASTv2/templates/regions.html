@@ -5,12 +5,6 @@
 
             <form>
                 <div class="form-group">
-                    <!--<div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-search"></i></div>
-
-                        <input type="text" class="form-control" placeholder="Search Regions" ng-model="searchRegion">
-
-                    </div>-->
                     <md-input-container class="md-block" flex-gt-sm>
                         <label>Search Regions</label>
                         <input ng-model="searchRegion">
@@ -27,9 +21,6 @@
                             <span ng-show="sortType == 'Abrv' && sortReverse" class="fa fa-caret-up"></span>
                         </a>
                     </th>
-                    <!--<th>Name</th>
-                    <th>Timestamp</th>
-                    <th></th>-->
                     <th>
                         <a href="#" ng-click="sortType = 'Name'; sortReverse = !sortReverse">
                             Name<span ng-show="sortType == 'Name' && !sortReverse" class="fa fa-caret-down"></span>

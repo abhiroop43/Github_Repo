@@ -7,7 +7,7 @@ var astApp = angular.module('astApp', ["ui.router",
     "ngSanitize",
     "ngResource",
     "ngRoute",
-"ngMaterial", "restangular"]);
+"ngMaterial", "ngCookies", "restangular", 'pascalprecht.translate']);
 
 var BASEURI = "http://192.168.7.186:85/api";
 
@@ -17,6 +17,16 @@ astApp.config(['$ocLazyLoadProvider', function ($ocLazyLoadProvider) {
         cssFilesInsertBefore: 'ng_load_plugins_before' // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
     });
 }]);
+
+astApp.config(function ($translateProvider) {
+    $translateProvider.useStaticFilesLoader({
+        prefix: '/languages/',
+        suffix: '.json'
+    });
+    $translateProvider.preferredLanguage('enUS');
+    $translateProvider.useLocalStorage();
+    $translateProvider.useSanitizeValueStrategy(null);
+});
 
 /* Setup global settings */
 astApp.factory('settings', ['$rootScope', function ($rootScope) {
@@ -49,31 +59,6 @@ astApp.controller('HeaderController', ['$scope', '$window', 'authentication', fu
     });
 
 
-    //if ($window.localStorage["user"] == undefined) {
-    //    authentication.login().then(function(data) {
-    //        //$rootScope.currentUser = data;
-    //        $window.localStorage["user"] = JSON.stringify(data);
-    //        $scope.loggedInUser = JSON.parse($window.localStorage["user"]);;
-    //        //console.log(data);
-    //    });
-    //}
-
-    //$scope.getQS = function (st) {
-    //    console.log('inside QS');
-    //    //$location.path('/application-list').search('st', value);
-    //    //$routeParams = { "st": st };
-    //}
-
-
-    //console.log($stateParams.st);
-    //$scope.$route = $route;
-    //$scope.$location = $location;
-    //$scope.$routeParams = $routeParams;
-    //console.log($location.path());
-    //console.log($routeParams);
-    //console.log($route.current.params);
-
-
 }]);
 
 /* Setup Layout Part - Sidebar */
@@ -91,7 +76,7 @@ astApp.controller('FooterController', ['$scope', function ($scope) {
 }]);
 
 //setup routing//
-astApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 'RestangularProvider', function ($stateProvider, $urlRouterProvider, $locationProvider, RestangularProvider) {
+astApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$translateProvider', 'RestangularProvider', function ($stateProvider, $urlRouterProvider, $locationProvider, $translateProvider, RestangularProvider) {
 
     RestangularProvider.setBaseUrl(BASEURI);
     RestangularProvider.setDefaultHeaders({
@@ -100,7 +85,8 @@ astApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 'Res
         //'Access-Control-Allow-Origin': 'http://192.168.7.186:84'
     });
     RestangularProvider.setDefaultHttpFields({
-        'withCredentials': true
+        'withCredentials': true,
+        'cache': true
     });
     RestangularProvider.setRestangularFields({
         id: '_id.$oid'
@@ -206,8 +192,6 @@ astApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 'Res
 
 }]);
 //end setup routing//
-
-
 
 /* Init global settings and run the app */
 astApp.run(["$rootScope", "settings", "$state", "$window", "authentication", function ($rootScope, settings, $state, $window, authentication) {

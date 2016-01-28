@@ -1,0 +1,29 @@
+﻿{
+  "placeholders": {
+    "REGION_SELECT": "Select Region",
+    "MEMBER_STATE_SELECT": "Select Member State",
+    "SELECT_ORG": "Select Organization",
+    "SELECT_COURSE_CAT": "Select Course Category",
+    "FEEDBACK_STATUS": {
+      "FBS_LABEL": "Feedback Status",
+      "PENDING": "Pending",
+      "COMPLETED": "Completed"
+    },
+    "STATUS_SEARCH": "Search for a Status",
+    "COURSE_SELECT": "Select Course",
+    "TRNG_REF": "Training Reference",
+    "COURSE_NAME": "Course Name",
+    "COURSE_REF": "Course Reference",
+    "APP_REF": "Application Reference",
+    "APP_ID": "Application ID",
+    "APP_NAME": "Application Name",
+    "TRNG_START_DT": "Training Start Date",
+    "TRNG_END_DT": "Training End Date",
+    "SUB_START_DT": "Submission Start Date",
+    "SUB_END_DT": "Submission End Date"
+  },
+  "buttons": {
+    "SEARCH_BTN": "Search",
+    "RESET_BTN": "Reset"
+  }
+}
