@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-astApp.controller('EditRegionsController', function ($scope, $log, $state, $window, Regions, SweetAlert, FileUploader) {
+astApp.controller('EditRegionsController', function ($scope, $log, $state, $window, Regions, FileUpload, SweetAlert, FileUploader) {
     $scope.$on('$viewContentLoaded', function () {
         //// initialize core components
         //Metronic.initAjax();
@@ -8,18 +8,28 @@ astApp.controller('EditRegionsController', function ($scope, $log, $state, $wind
     //$log.log($state.params.id);
     var rgn = this;
     rgn.modelData = {};
+    rgn.regionFiles = [];
     rgn.regionId = $state.params.id;
     rgn.regionPromise = Regions.one("/" + rgn.regionId).get();
     rgn.regionPromise.then(function (data) {
         //$log.log(data);
         //$log.log(rgn.regionPromise);
         rgn.modelData = data;
+
+        FileUpload.getFiles.one("/" + rgn.modelData.RegionId).get().then(function(files) {
+            rgn.regionFiles = files;
+            $log.log("File data fetched",files);
+        });
     });
     //$log.log(rgn.regionPromise);
-    rgn.loggedInUser = JSON.parse($window.localStorage["user"]);;
+    rgn.loggedInUser = JSON.parse($window.localStorage["user"]);
+
+    
+
+    
 
     rgn.uploader = new FileUploader();
-    rgn.uploader.url = ""
+    //rgn.uploader.url = "";
 
 
     //submit//

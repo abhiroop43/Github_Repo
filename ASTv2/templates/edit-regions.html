@@ -67,6 +67,19 @@
                                     <label>Description (English)</label>
                                     <textarea ng-model="editRegionsCtrl.modelData.Description" columns="1" md-maxlength="150" rows="5"></textarea>
                                 </md-input-container>
+                                <table class="table table-responsive table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Files</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="file in editRegionsCtrl.regionFiles">
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <div class="col-md-6">
