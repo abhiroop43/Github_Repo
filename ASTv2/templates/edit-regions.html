@@ -1,0 +1,113 @@
+﻿<style>
+    .noTextWrap {
+        white-space: nowrap !important;
+    }
+</style>
+
+<div layout="row" layout-sm="column" layout-align="space-around" ng-hide="editRegionsCtrl.regionPromise.$$state.status > 0">
+    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+
+<div layout="column" class="md-inline-form" ng-show="editRegionsCtrl.regionPromise.$$state.status > 0">
+
+    <md-content layout-padding>
+        <div>
+            <form name="regionEditForm" class="horizontal-form">
+                <div class="form-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Name (English)</label>
+                                    <input ng-model="editRegionsCtrl.modelData.Name" required>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Name (Arabic)</label>
+                                    <input ng-model="editRegionsCtrl.modelData.NameAr" required dir="rtl">
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Abreviation</label>
+                                    <input ng-model="editRegionsCtrl.modelData.Abrv" required>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Attachments (used in content)</label>
+                                <input type="file" nv-file-select uploader="editRegionsCtrl.uploader" /><br />
+                                <!--<ul>
+                                    <li ng-repeat="item in editRegionsCtrl.uploader.queue">
+                                        Name: <span ng-bind="item.file.name"></span><br/>
+                                        <button ng-click="item.upload()">upload</button>
+                                    </li>
+                                </ul>-->
+
+                                
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block">
+                                    <label>Description (English)</label>
+                                    <textarea ng-model="editRegionsCtrl.modelData.Description" columns="1" md-maxlength="150" rows="5"></textarea>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block">
+                                    <label>Description (Arabic)</label>
+                                    <textarea ng-model="editRegionsCtrl.modelData.DescriptionAr" columns="1" md-maxlength="150" rows="5" dir="rtl"></textarea>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-switch class="md-primary" md-no-ink aria-label="Region Enabled" ng-model="editRegionsCtrl.modelData.IsEnabled">
+                                    <label>Enabled?</label>
+                                </md-switch>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="form-actions left">
+                    <!--<button type="button" class="btn default">Cancel</button>
+                    <button type="submit" class="btn blue">
+                        <i class="fa fa-check"></i> Save
+                    </button>-->
+                    <md-button class="md-raised md-primary" ng-click="editRegionsCtrl.EditRegion(editRegionsCtrl.modelData)"><i class="fa fa-check"></i> Submit</md-button>
+                    <md-button class="md-raised">{{'buttons.RESET_BTN' | translate}}</md-button>
+
+                </div>
+            </form>
+        </div>
+    </md-content>
+</div>
+{{editRegionsCtrl.modelData}}

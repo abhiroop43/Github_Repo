@@ -1,13 +1,20 @@
 ﻿'use strict';
 
 //global variables//
-var astApp = angular.module('astApp', ["ui.router",
+var astApp = angular.module('astApp', [
+    "ui.router",
+    "ngAnimate",
     "ui.bootstrap",
     "oc.lazyLoad",
     "ngSanitize",
     "ngResource",
     "ngRoute",
-"ngMaterial", "ngCookies", "restangular", 'pascalprecht.translate']);
+"ngMaterial",
+"ngCookies",
+"restangular",
+"pascalprecht.translate",
+"oitozero.ngSweetAlert",
+"angularFileUpload"]);
 
 var BASEURI = "http://192.168.7.186:85/api";
 
@@ -86,7 +93,7 @@ astApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$tr
     });
     RestangularProvider.setDefaultHttpFields({
         'withCredentials': true,
-        'cache': true
+        'cache': false
     });
     RestangularProvider.setRestangularFields({
         id: '_id.$oid'
@@ -186,6 +193,46 @@ astApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$tr
             ]
         }
     })
+    .state('edit-regions', {
+        url: "/edit-regions?id",
+        templateUrl: "templates/edit-regions.html",
+        data: { pageTitle: "Region Details", pageSubTitle: "Update Region Details" },
+        controller: "EditRegionsController",
+        controllerAs: "editRegionsCtrl",
+        resolve: {
+            deps: [
+                    '$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load({
+                            name: 'astApp',
+                            insertBefore: '#ng_load_plugins_before',
+                            files: [
+                                'scripts/controllers/EditRegionsController.js'
+                            ]
+                        });
+                    }
+            ]
+        }
+    })
+    .state('new-region', {
+        url: "/new-region",
+        templateUrl: "templates/new-region.html",
+        data: { pageTitle: "New Region", pageSubTitle: "Create a new region" },
+        controller: "NewRegionController",
+        controllerAs: "newRegionCtrl",
+        resolve: {
+            deps: [
+                    '$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load({
+                            name: 'astApp',
+                            insertBefore: '#ng_load_plugins_before',
+                            files: [
+                                'scripts/controllers/NewRegionController.js'
+                            ]
+                        });
+                    }
+            ]
+        }
+    })
     ;
 
 
@@ -198,7 +245,7 @@ astApp.run(["$rootScope", "settings", "$state", "$window", "authentication", fun
 
     $rootScope.$state = $state; // state to be accessed from view
     if ($window.localStorage["user"] == undefined) {
-        authentication.login().then(function(data) {
+        authentication.login().then(function (data) {
             $rootScope.currentUser = data;
             $window.localStorage["user"] = JSON.stringify(data);
             if (data.UserRoleID != 6) {
@@ -212,5 +259,5 @@ astApp.run(["$rootScope", "settings", "$state", "$window", "authentication", fun
             $window.location.href = "http://www.google.com/";
         }
     }
-    
+
 }]);

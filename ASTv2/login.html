@@ -1,37 +1,66 @@
 ﻿<!DOCTYPE html>
-<html ng-app>
+<html>
 <head>
-    <title>Login</title>
-	<meta charset="utf-8" />
+    <title>AngularJS File Upoad Example with $http and FormData</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 </head>
-<body>
-<script src="assets/global/plugins/angularjs/angular.min.js" type="text/javascript"></script>
-    <script src="scripts/app.js" type="text/javascript"></script>
-    <script src="scripts/services/authentication.js"></script>
-<script>
-    angular.module('login', []).run(["$window", "authentication", function($window, authentication) {
 
-        if ($window.sessionStorage["user"] == undefined) {
-            authentication.login().then(function (data) {
-                $window.sessionStorage["user"] = JSON.stringify(data);
-                if (data.UserRoleID != 6) {
-                    $window.location.href = "http://www.google.com/";
-                } else {
-                    $window.location.href = "/";
-                }
-                //console.log(data);
-            });
-        } else {
-            var user = JSON.parse($window.sessionStorage["user"]);
-            if (user.UserRoleID != 6) {
-                $window.location.href = "http://www.google.com/";
-            } else {
-                $window.location.href = "/";
+<body ng-app="fupApp">
+<div ng-controller="fupController">
+
+    <input type="file" id="file1" name="file" multiple
+           ng-files="getTheFiles($files)"/>
+
+    <input type="button" ng-click="uploadFiles()" value="Upload"/>
+</div>
+
+    <script>
+    angular.module('fupApp', [])
+        .directive('ngFiles', ['$parse', function ($parse) {
+
+            function fn_link(scope, element, attrs) {
+                var onChange = $parse(attrs.ngFiles);
+                element.on('change', function (event) {
+                    onChange(scope, { $files: event.target.files });
+                });
+            };
+
+            return {
+                link: fn_link
             }
-        }
+        } ])
+        .controller('fupController', function ($scope, $http) {
 
-    }]);
+            var formdata = new FormData();
+            $scope.getTheFiles = function ($files) {
+                angular.forEach($files, function (value, key) {
+                    formdata.append(key, value);
+                });
+            };
 
-</script>
+            // NOW UPLOAD THE FILES.
+            $scope.uploadFiles = function () {
+
+                var request = {
+                    method: 'POST',
+                    url: 'http://192.168.7.186:85//api/fileupload/',
+                    data: formdata,
+                    headers: {
+                        'Content-Type': undefined
+                    }
+                };
+
+                // SEND THE FILES.
+                $http(request)
+                    .success(function (d) {
+                        alert(d);
+                    })
+                    .error(function () {
+                    });
+            }
+        });
+    </script>
 </body>
+
+
 </html>

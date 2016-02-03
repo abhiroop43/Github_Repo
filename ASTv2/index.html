@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en" ng-App="astApp">
+<!--<html ng-App="astApp" dir="rtl">-->
+<html ng-App="astApp">
 <head>
     <title ng-bind="'Aviation Smart Training | ' + $state.current.data.pageTitle"></title>
 
@@ -14,10 +15,17 @@
     <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!--<link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css"/>-->
+
     <link href="assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
-    <link href="assets/global/plugins/angularjs/angular-material.min.css" rel="stylesheet" />
+    <!--<link href="https://rawgit.com/angular/bower-material/master/angular-material.css" rel="stylesheet" />-->
+    <link href="assets/global/plugins/angularjs/plugins/angular-material/angular-material.css" rel="stylesheet" />
+    <link href="assets/global/plugins/angularjs/plugins/sweet-alert/sweet-alert.css" rel="stylesheet" />
+    <!--<link href="assets/global/plugins/angularjs/angular-material.min.css" rel="stylesheet" />-->
     <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN DYMANICLY LOADED CSS FILES(all plugin and page related styles must be loaded between GLOBAL and THEME css files ) -->
+    
     <link id="ng_load_plugins_before" />
     <!-- END DYMANICALLY LOADED CSS FILES -->
     <!-- BEGIN THEME STYLES -->
@@ -28,16 +36,17 @@
     <link href="assets/admin/layout3/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color" />
     <link href="assets/admin/layout3/css/custom.css" rel="stylesheet" type="text/css" />
     <!-- END THEME STYLES -->
-
+    <link href="styles/app.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body ng-controller="AppController" class="page-on-load page-md">
 
     <!-- BEGIN PAGE SPINNER -->
     <div ng-spinner-bar class="page-spinner-bar">
-        <div class="bounce1"></div>
+        <!--<div class="bounce1"></div>
         <div class="bounce2"></div>
-        <div class="bounce3"></div>
+        <div class="bounce3"></div>-->
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
     </div>
     <!-- END PAGE SPINNER -->
     <!-- BEGIN HEADER -->
@@ -85,7 +94,8 @@
     <!-- BEGIN CORE ANGULARJS PLUGINS -->
     <script src="assets/global/plugins/angularjs/angular.min.js" type="text/javascript"></script>
     <!--<script src="assets/global/plugins/lodash.js"></script>-->
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <!--<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>-->
+    <script src="assets/global/plugins/angularjs/plugins/angular-material/underscore-min.js"></script>
     <script src="assets/global/plugins/angularjs/angular-resource.js" type="text/javascript"></script>
     <script src="assets/global/plugins/angularjs/angular-route.js" type="text/javascript"></script>
     <script src="assets/global/plugins/angularjs/angular-sanitize.min.js" type="text/javascript"></script>
@@ -94,11 +104,15 @@
 
     <script src="assets/global/plugins/angularjs/angular-animate.js"></script>
     <script src="assets/global/plugins/angularjs/angular-aria.js"></script>
-    <script src="assets/global/plugins/angularjs/angular-messages.js"></script>
+<script src="assets/global/plugins/angularjs/angular-messages.js"></script>
+
+
+<script src="assets/global/plugins/angularjs/plugins/angular-file-upload/angular-file-upload.min.js"></script>
 
     <!-- Angular Material Library -->
-
-    <script src="assets/global/plugins/angularjs/angular-material.min.js"></script>
+    <!--<script src="assets/global/plugins/angularjs/angular-material.min.js"></script>-->
+    <!--<script src="https://rawgit.com/angular/bower-material/master/angular-material.js"></script>-->
+    <script src="assets/global/plugins/angularjs/plugins/angular-material/angular-material.js"></script>
     <script src="assets/global/plugins/angularjs/plugins/angular-translate.js"></script>
     <script src="assets/global/plugins/angularjs/plugins/angular-translate-loader-url.js"></script>
     <script src="assets/global/plugins/angularjs/plugins/angular-translate-loader-static-files.js"></script>
@@ -110,11 +124,14 @@
     <script src="assets/global/plugins/angularjs/plugins/ocLazyLoad.min.js" type="text/javascript"></script>
     <script src="assets/global/plugins/angularjs/plugins/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
     <script src="assets/global/plugins/angularjs/plugins/restangular.js"></script>
+    <script src="assets/global/plugins/angularjs/plugins/sweet-alert/sweet-alert.js"></script>
+    <script src="assets/global/plugins/angularjs/plugins/sweet-alert/sweetalert.min.js"></script>
     <!-- END CORE ANGULARJS PLUGINS -->
     <!-- BEGIN APP LEVEL ANGULARJS SCRIPTS -->
     <script src="scripts/app.js" type="text/javascript"></script>
     <script src="scripts/directives.js" type="text/javascript"></script>
-    <script src="scripts/services/authentication.js"></script>
+    <script src="scripts/services/authentication.js" type="text/javascript"></script>
+    <script src="scripts/services/regions.js" type="text/javascript"></script>
     <script src="scripts/directives/coursecategory.js" type="text/javascript"></script>
     <script src="scripts/directives/regionselect.js" type="text/javascript"></script>
     <!-- END APP LEVEL ANGULARJS SCRIPTS -->

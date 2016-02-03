@@ -1,0 +1,96 @@
+﻿<style>
+    .noTextWrap {
+        white-space: nowrap !important;
+    }
+</style>
+
+<div layout="column" class="md-inline-form">
+
+    <md-content layout-padding>
+        <div>
+            <form name="regionEditForm" class="horizontal-form">
+                <div class="form-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Name (English)</label>
+                                    <input ng-model="newRegionCtrl.modelData.Name" required>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Name (Arabic)</label>
+                                    <input ng-model="newRegionCtrl.modelData.NameAr" required dir="rtl">
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Abreviation</label>
+                                    <input ng-model="newRegionCtrl.modelData.Abrv" required>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block noTextWrap">
+                                    <label>Attachments (used in content)</label>
+                                    <input ng-model="newRegionCtrl.Abbr">
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block">
+                                    <label>Description (English)</label>
+                                    <textarea ng-model="newRegionCtrl.modelData.Description" columns="1" md-maxlength="150" rows="5"></textarea>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-input-container class="md-block">
+                                    <label>Description (Arabic)</label>
+                                    <textarea ng-model="newRegionCtrl.modelData.DescriptionAr" columns="1" md-maxlength="150" rows="5"></textarea>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <md-switch class="md-primary" md-no-ink aria-label="Region Enabled" ng-model="newRegionCtrl.modelData.IsEnabled">
+                                    <label>Enabled?</label>
+                                </md-switch>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="form-actions left">
+                    <md-button class="md-raised md-primary"><i class="fa fa-check"></i> Submit</md-button>
+                    <md-button class="md-raised">{{'buttons.RESET_BTN' | translate}}</md-button>
+
+                </div>
+            </form>
+        </div>
+    </md-content>
+</div>
