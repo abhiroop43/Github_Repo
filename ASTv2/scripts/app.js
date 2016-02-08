@@ -14,7 +14,9 @@ var astApp = angular.module('astApp', [
 "restangular",
 "pascalprecht.translate",
 "oitozero.ngSweetAlert",
-"angularFileUpload"]);
+"angularFileUpload",
+"ngFileSaver",
+"base64"]);
 
 var BASEURI = "http://192.168.7.186:85/api";
 
